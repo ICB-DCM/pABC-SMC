@@ -41,7 +41,7 @@ nix-tumor3d -x 1 -y 200
 
 The default model parameter values can be modified by passing further arguments:
 
-| Commandline Argument | Description | Default Value |
+| Argument | Description | Default Value |
 | --- | --- | --- |
 | `-kdiv FLOAT` | division rate | 0.032 |
 
@@ -52,6 +52,8 @@ In order to compare the simulation results on the fly with given data, the follo
 nix-compare2d DATA_FILES PARAMETER_LIST
 ```
 The `DATA_FILES` are passed as
+| Argument | Description |
+| --- | --- |
 | `-g FILENAME` | growth curve |
 | `-k FILENAME` | day 17: KI67 positive / proliferating cell fraction* |
 | `-t FILENAME` | day 17: TUNEL positive / necrotic cell fraction* |
