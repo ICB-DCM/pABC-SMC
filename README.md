@@ -77,7 +77,7 @@ The default model parameter values can be modified by passing further arguments:
 | `-RWasteDiffusion[FLOAT]` | waste diffusion coefficient (\mu m^2/hours) | 0.032 |
 | `-RWasteUptake[FLOAT]` | waste degradation rate (1/hours) | 0.032 |
 | `-RWasteThresholdSlowedGrowth[FLOAT]` | waste division threshold (mM) | 0.032 |
-| `-RWasteIntoxicatedCellCycles[FLOAT]` | maximum number of cell cycles under waste exposure / oxygen deprivation (-) | 0.032 |
+| `-RWasteIntoxicatedCellCycles[FLOAT]` | max #cell cycles under waste exposure / O2 deprivation | 0.032 |
 
 For a complete list of programm arguments run:
 
