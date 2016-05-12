@@ -115,11 +115,11 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
 
  
 ## Example Data
-The directory `data` contains 4 example data set with different error models:
+The directory `\data` contains 4 example data set with different error models:
 
-  | Files | 1st column (x) | 2nd column (y) | 3rd column (\sigma) |
-  | --- | --- | --- | --- |
-  | `SK-MES1_*.dat` | time (h) / distance (\mu m) | mean | **std** |
-  | `SK-MES1_*.dat.mean` | time (h) / distance (\mu m) | mean | **0.1 * mean** |
-  | `SK-MES1_*.dat.std` | time (h) / distance (\mu m) | mean | **std of mean** |
-  | `SK-MES1_*.dat.minmax` | time (h) / distance (\mu m) | mean | **max mean - min mean** |
+| Files | 1st column (x) | 2nd column (y) | 3rd column (\sigma) |
+| --- | --- | --- | --- |
+| `SK-MES1_*.dat` | time (h) / distance (\mu m) | mean | **std** |
+| `SK-MES1_*.dat.mean` | time (h) / distance (\mu m) | mean | **0.1 * mean** |
+| `SK-MES1_*.dat.std` | time (h) / distance (\mu m) | mean | **std of mean** |
+| `SK-MES1_*.dat.minmax` | time (h) / distance (\mu m) | mean | **max mean - min mean** |
