@@ -51,6 +51,15 @@ In order to compare the simulation results on the fly with given data, the follo
 ```
 nix-compare2d DATA_FILES PARAMETER_LIST
 ```
-
+The `DATA_FILES` are passed as
+| `-g FILENAME` | growth curve |
+| `-k FILENAME` | day 17: KI67 positive / proliferating cell fraction* |
+| `-t FILENAME` | day 17: TUNEL positive / necrotic cell fraction* |
+| `-e FILENAME` | day 17: COLIV intensity / extra-cellular matrix (ECM) density* |
+| `-K FILENAME` | day 24: KI67 positive / proliferating cell fraction* |
+| `-T FILENAME` | day 24: TUNEL positive / necrotic cell fraction* |
+| `-E FILENAME` | day 24: COLIV intensity / extra-cellular matrix (ECM) density* |
+* as function of the distance to the outer tumor border
+ 
 ## Example Data
 The directory `data` contains 4 example data set.
