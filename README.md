@@ -39,8 +39,18 @@ The equivalent in **three dimensions** and a batch of **20 realisations**:
 nix-tumor3d -x 1 -y 200
 ```
 
-|Commandline Argument| Description | Default Value|
+The default model parameter values can be modified by passing further arguments:
 
-####1) Tumor Simulation:
+| Commandline Argument | Description | Default Value |
+| --- | --- | --- |
+| `-kdiv FLOAT` | division rate | 0.032 |
+
+####2) Comparison with Data:
+In order to compare the simulation results on the fly with given data, the following command can be used instead:
+
+```
+nix-compare2d DATA_FILES PARAMETER_LIST
+```
 
 ## Example Data
+The directory `data` contains 4 example data set.
