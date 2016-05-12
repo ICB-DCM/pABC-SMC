@@ -108,11 +108,15 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
  
 * The `LIKELIHOOD_THRESHOLD` indicates the value which will stop a running simulation if exeeded and will be returned back. It is passed as 
   
-  ```-l[FLOAT]```
+  ```
+  -l[FLOAT] 
+  ```
   
 * `PARAMETER_LIST` is an optional list of 0 to 18 values corresponding to the model parameters in [Tab. 1](#table-1-model-parameters) 
 
-  ```FLOAT ... FLOAT```
+  ```
+  FLOAT ... FLOAT
+  ```
 
 After finishing the simulation for the given model parameters the programm will print the likelihood to `stdout`. 
  
