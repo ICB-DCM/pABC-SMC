@@ -60,24 +60,24 @@ The default model parameter values can be modified by passing further arguments:
 ######Table 1: Model Parameters
 | Argument | Description | Default Value |
 | --- | --- | --- |
-| `-Rdiv FLOAT` | division rate (1/hours) | 0.032 |
-| `-RReentranceProbabilityLength FLOAT` | division depth (\mu m) | 130 |
-| `-RInitialRadius FLOAT` | initial tumor radius (\mu m) | 1 |
-| `-RInitialQuiescentFraction FLOAT` | initial quiescent cell fraction (-) | 0.032 |
-| `-RECMProductionRate FLOAT` | ECM production rate (1/hours) | 0.032 |
-| `-RECMDegradationRate FLOAT` | ECM degradation rate (1/hours) | 0.032 |
-| `-RECMThresholdQuiescence FLOAT` | ECM division threshold (-) | 0.032 |
-| `-Rre FLOAT` | cell cycle reentrance rate (1/hours) | 0.032 |
-| `-Rnec FLOAT` | necrosis rate (1/hours) | 0.032 |
-| `-Rlys FLOAT` | lysis rate (1/hours) | 0.032 |
-| `-RATPThresholdQuiescence FLOAT` | ATP synthesis division threshold (mM/h) | 0.032 |
-| `-RATPThresholdDeath FLOAT` | ATP synthesis necrosis threshold (mM/h) | 0.032 |
-| `-RLactateThresholdQuiescence FLOAT` | lactate division threshold (mM) | 0.032 |
-| `-RLactateThresholdDeath FLOAT` | lactate necrosis threshold (mM) | 0.032 |
-| `-RWasteDiffusion FLOAT` | waste diffusion coefficient (\mu m^2/hours) | 0.032 |
-| `-RWasteUptake FLOAT` | waste degradation rate (1/hours) | 0.032 |
-| `-RWasteThresholdSlowedGrowth FLOAT` | waste division threshold (mM) | 0.032 |
-| `-RWasteIntoxicatedCellCycles FLOAT` | maximum number of cell cycles under waste exposure / oxygen deprivation (-) | 0.032 |
+| `-Rdiv[FLOAT]` | division rate (1/hours) | 0.032 |
+| `-RReentranceProbabilityLength[FLOAT]` | division depth (\mu m) | 130 |
+| `-RInitialRadius[FLOAT]` | initial tumor radius (\mu m) | 1 |
+| `-RInitialQuiescentFraction[FLOAT]` | initial quiescent cell fraction (-) | 0.032 |
+| `-RECMProductionRate[FLOAT]` | ECM production rate (1/hours) | 0.032 |
+| `-RECMDegradationRate[FLOAT]` | ECM degradation rate (1/hours) | 0.032 |
+| `-RECMThresholdQuiescence[FLOAT]` | ECM division threshold (-) | 0.032 |
+| `-Rre[FLOAT]` | cell cycle reentrance rate (1/hours) | 0.032 |
+| `-Rnec[FLOAT]` | necrosis rate (1/hours) | 0.032 |
+| `-Rlys[FLOAT]` | lysis rate (1/hours) | 0.032 |
+| `-RATPThresholdQuiescence[FLOAT]` | ATP synthesis division threshold (mM/h) | 0.032 |
+| `-RATPThresholdDeath[FLOAT]` | ATP synthesis necrosis threshold (mM/h) | 0.032 |
+| `-RLactateThresholdQuiescence[FLOAT]` | lactate division threshold (mM) | 0.032 |
+| `-RLactateThresholdDeath[FLOAT]` | lactate necrosis threshold (mM) | 0.032 |
+| `-RWasteDiffusion[FLOAT]` | waste diffusion coefficient (\mu m^2/hours) | 0.032 |
+| `-RWasteUptake[FLOAT]` | waste degradation rate (1/hours) | 0.032 |
+| `-RWasteThresholdSlowedGrowth[FLOAT]` | waste division threshold (mM) | 0.032 |
+| `-RWasteIntoxicatedCellCycles[FLOAT]` | maximum number of cell cycles under waste exposure / oxygen deprivation (-) | 0.032 |
 
 For a complete list of programm arguments run:
 
@@ -96,19 +96,19 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
 
   | Argument | Description |
   | --- | --- |
-  | `-g FILENAME` | growth curve\*\* |
-  | `-k FILENAME` | day 17: KI67 positive / proliferating cell fraction* |
-  | `-t FILENAME` | day 17: TUNEL positive / necrotic cell fraction* |
-  | `-e FILENAME` | day 17: COLIV intensity / extra-cellular matrix (ECM) density* |
-  | `-K FILENAME` | day 24: KI67 positive / proliferating cell fraction* |
-  | `-T FILENAME` | day 24: TUNEL positive / necrotic cell fraction* |
-  | `-E FILENAME` | day 24: COLIV intensity / extra-cellular matrix (ECM) density* |
+  | `-g[FILENAME]` | growth curve\*\* |
+  | `-k[FILENAME]` | day 17: KI67 positive / proliferating cell fraction* |
+  | `-t[FILENAME]` | day 17: TUNEL positive / necrotic cell fraction* |
+  | `-e[FILENAME]` | day 17: COLIV intensity / extra-cellular matrix (ECM) density* |
+  | `-K[FILENAME]` | day 24: KI67 positive / proliferating cell fraction* |
+  | `-T[FILENAME]` | day 24: TUNEL positive / necrotic cell fraction* |
+  | `-E[FILENAME]` | day 24: COLIV intensity / extra-cellular matrix (ECM) density* |
   \* as function of the distance to the outer tumor border (\mu m)
   \*\* as function of time (days)
  
 * The `LIKELIHOOD_THRESHOLD` indicates the value which will stop a running simulation if exeeded and will be returned back. It is passed as 
   
-  ```-l FLOAT```
+  ```-l[FLOAT]```
   
 * `PARAMETER_LIST` is an optional list of 0 to 18 values corresponding to the model parameters in [Tab. 1](#table-1-model-parameters) 
 
@@ -125,3 +125,12 @@ The directory `\data` contains 4 example data set with different error models:
 | `SK-MES1_*.dat.mean` | time (h) / distance (\mu m) | mean | **0.1 * mean** |
 | `SK-MES1_*.dat.std` | time (h) / distance (\mu m) | mean | **std of mean (over all x)** |
 | `SK-MES1_*.dat.minmax` | time (h) / distance (\mu m) | mean | **max mean - min mean (over all x)** |
+
+An example 
+
+``` 
+nix-compare2d -O0.28 -G25 -gdata/SK-MES1_III_GC.dat.MinMax \
+	-kdata/SK-MES1_III_T3_Ki67.dat.MinMax -Kdata/SK-MES1_III_T4_Ki67.dat.MinMax \
+	-tdata/SK-MES1_III_T3_TUNEL.dat.MinMax -Tdata/SK-MES1_III_T4_TUNEL.dat.MinMax \
+	-edata/SK-MES1_III_T3_ECM.dat.MinMax -Edata/SK-MES1_III_T4_ECM.dat.MinMax
+``` 
