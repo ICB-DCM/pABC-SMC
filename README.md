@@ -63,21 +63,21 @@ The default model parameter values can be modified by passing further arguments:
 | `-Rdiv FLOAT` | division rate (1/hours) | 0.032 |
 | `-RReentranceProbabilityLength FLOAT` | division depth (\mu m) | 130 |
 | `-RInitialRadius FLOAT` | initial tumor radius (\mu m) | 1 |
-| `-RInitialQuiescentFraction FLOAT` | division rate (1/hours) | 0.032 |
-| `-RECMProductionRate FLOAT` | division rate (1/hours) | 0.032 |
-| `-RECMDegradationRate FLOAT` | division rate (1/hours) | 0.032 |
-| `-RECMThresholdQuiescence FLOAT` | division rate (1/hours) | 0.032 |
-| `-Rre FLOAT` | division rate (1/hours) | 0.032 |
-| `-Rnec FLOAT` | division rate (1/hours) | 0.032 |
-| `-Rlys FLOAT` | division rate (1/hours) | 0.032 |
-| `-RATPThresholdQuiescence FLOAT` | division rate (1/hours) | 0.032 |
-| `-RATPThresholdDeath FLOAT` | division rate (1/hours) | 0.032 |
-| `-RLactateThresholdQuiescence FLOAT` | division rate (1/hours) | 0.032 |
-| `-RLactateThresholdDeath FLOAT` | division rate (1/hours) | 0.032 |
-| `-RWasteDiffusion FLOAT` | division rate (1/hours) | 0.032 |
-| `-RWasteUptake FLOAT` | division rate (1/hours) | 0.032 |
-| `-RWasteThresholdSlowedGrowth FLOAT` | division rate (1/hours) | 0.032 |
-| `-RWasteIntoxicatedCellCycles FLOAT` | division rate (1/hours) | 0.032 |
+| `-RInitialQuiescentFraction FLOAT` | initial quiescent cell fraction (-) | 0.032 |
+| `-RECMProductionRate FLOAT` | ECM production rate (1/hours) | 0.032 |
+| `-RECMDegradationRate FLOAT` | ECM degradation rate (1/hours) | 0.032 |
+| `-RECMThresholdQuiescence FLOAT` | ECM division threshold (-) | 0.032 |
+| `-Rre FLOAT` | cell cycle reentrance rate (1/hours) | 0.032 |
+| `-Rnec FLOAT` | necrosis rate (1/hours) | 0.032 |
+| `-Rlys FLOAT` | lysis rate (1/hours) | 0.032 |
+| `-RATPThresholdQuiescence FLOAT` | ATP synthesis division threshold (mM/h) | 0.032 |
+| `-RATPThresholdDeath FLOAT` | ATP synthesis necrosis threshold (mM/h) | 0.032 |
+| `-RLactateThresholdQuiescence FLOAT` | lactate division threshold (mM) | 0.032 |
+| `-RLactateThresholdDeath FLOAT` | lactate necrosis threshold (mM) | 0.032 |
+| `-RWasteDiffusion FLOAT` | waste diffusion coefficient (\mu m^2/hours) | 0.032 |
+| `-RWasteUptake FLOAT` | waste degradation rate (1/hours) | 0.032 |
+| `-RWasteThresholdSlowedGrowth FLOAT` | waste division threshold (mM) | 0.032 |
+| `-RWasteIntoxicatedCellCycles FLOAT` | maximum number of cell cycles under waste exposure / oxygen deprivation (-) | 0.032 |
 
 For a complete list of programm arguments run:
 
@@ -96,14 +96,15 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
 
   | Argument | Description |
   | --- | --- |
-  | `-g FILENAME` | growth curve |
+  | `-g FILENAME` | growth curve\*\* |
   | `-k FILENAME` | day 17: KI67 positive / proliferating cell fraction* |
   | `-t FILENAME` | day 17: TUNEL positive / necrotic cell fraction* |
   | `-e FILENAME` | day 17: COLIV intensity / extra-cellular matrix (ECM) density* |
   | `-K FILENAME` | day 24: KI67 positive / proliferating cell fraction* |
   | `-T FILENAME` | day 24: TUNEL positive / necrotic cell fraction* |
   | `-E FILENAME` | day 24: COLIV intensity / extra-cellular matrix (ECM) density* |
-  \* as function of the distance to the outer tumor border
+  \* as function of the distance to the outer tumor border (\mu m)
+  \*\* as function of time (days)
  
 * The `LIKELIHOOD_THRESHOLD` indicates the value which will stop a running simulation if exeeded and will be returned back. It is passed as 
   
@@ -113,6 +114,7 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
 
   ```FLOAT ... FLOAT```
 
+After finishing the simulation for the given model parameters the programm will print the likelihood to `stdout`. 
  
 ## Example Data
 The directory `\data` contains 4 example data set with different error models:
@@ -121,5 +123,5 @@ The directory `\data` contains 4 example data set with different error models:
 | --- | --- | --- | --- |
 | `SK-MES1_*.dat` | time (h) / distance (\mu m) | mean | **std** |
 | `SK-MES1_*.dat.mean` | time (h) / distance (\mu m) | mean | **0.1 * mean** |
-| `SK-MES1_*.dat.std` | time (h) / distance (\mu m) | mean | **std of mean** |
-| `SK-MES1_*.dat.minmax` | time (h) / distance (\mu m) | mean | **max mean - min mean** |
+| `SK-MES1_*.dat.std` | time (h) / distance (\mu m) | mean | **std of mean (over all x)** |
+| `SK-MES1_*.dat.minmax` | time (h) / distance (\mu m) | mean | **max mean - min mean (over all x)** |
