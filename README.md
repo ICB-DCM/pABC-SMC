@@ -52,6 +52,7 @@ In order to compare the simulation results on the fly with given data, the follo
 nix-compare2d DATA_FILES PARAMETER_LIST
 ```
 The `DATA_FILES` are passed as
+
 | Argument | Description |
 | --- | --- |
 | `-g FILENAME` | growth curve |
