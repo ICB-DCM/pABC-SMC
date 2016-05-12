@@ -78,21 +78,25 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
 
 * The `DATA_FILES` are passed as
 
-| Argument | Description |
-| --- | --- |
-| `-g FILENAME` | growth curve |
-| `-k FILENAME` | day 17: KI67 positive / proliferating cell fraction* |
-| `-t FILENAME` | day 17: TUNEL positive / necrotic cell fraction* |
-| `-e FILENAME` | day 17: COLIV intensity / extra-cellular matrix (ECM) density* |
-| `-K FILENAME` | day 24: KI67 positive / proliferating cell fraction* |
-| `-T FILENAME` | day 24: TUNEL positive / necrotic cell fraction* |
-| `-E FILENAME` | day 24: COLIV intensity / extra-cellular matrix (ECM) density* |
-\* as function of the distance to the outer tumor border
+  | Argument | Description |
+  | --- | --- |
+  | `-g FILENAME` | growth curve |
+  | `-k FILENAME` | day 17: KI67 positive / proliferating cell fraction* |
+  | `-t FILENAME` | day 17: TUNEL positive / necrotic cell fraction* |
+  | `-e FILENAME` | day 17: COLIV intensity / extra-cellular matrix (ECM) density* |
+  | `-K FILENAME` | day 24: KI67 positive / proliferating cell fraction* |
+  | `-T FILENAME` | day 24: TUNEL positive / necrotic cell fraction* |
+  | `-E FILENAME` | day 24: COLIV intensity / extra-cellular matrix (ECM) density* |
+  \* as function of the distance to the outer tumor border
  
 * The `LIKELIHOOD_THRESHOLD` indicates the value which will stop a running simulation if exeeded and will be returned back. It is passed as 
+  
   ```-l FLOAT```
   
 * `PARAMETER_LIST` is an optional list of 0 to 18 values corresponding to the model parameters in [Tab. 1](#table-1-model-parameters) 
+
+  ```FLOAT ... FLOAT```
+
  
 ## Example Data
 The directory `data` contains 4 example data set.
