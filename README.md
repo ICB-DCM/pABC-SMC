@@ -43,7 +43,24 @@ The default model parameter values can be modified by passing further arguments:
 
 | Argument | Description | Default Value |
 | --- | --- | --- |
-| `-kdiv FLOAT` | division rate | 0.032 |
+| `-Rdiv FLOAT` | division rate (1/hours) | 0.032 |
+| `-RReentranceProbabilityLength FLOAT` | division depth (\mu m) | 130 |
+| `-RInitialRadius FLOAT` | initial tumor radius (\mu m) | 1 |
+| `-RInitialQuiescentFraction FLOAT` | division rate (1/hours) | 0.032 |
+| `-RECMProductionRate FLOAT` | division rate (1/hours) | 0.032 |
+| `-RECMDegradationRate FLOAT` | division rate (1/hours) | 0.032 |
+| `-RECMThresholdQuiescence FLOAT` | division rate (1/hours) | 0.032 |
+| `-Rre FLOAT` | division rate (1/hours) | 0.032 |
+| `-Rnec FLOAT` | division rate (1/hours) | 0.032 |
+| `-Rlys FLOAT` | division rate (1/hours) | 0.032 |
+| `-RATPThresholdQuiescence FLOAT` | division rate (1/hours) | 0.032 |
+| `-RATPThresholdDeath FLOAT` | division rate (1/hours) | 0.032 |
+| `-RLactateThresholdQuiescence FLOAT` | division rate (1/hours) | 0.032 |
+| `-RLactateThresholdDeath FLOAT` | division rate (1/hours) | 0.032 |
+| `-RWasteDiffusion FLOAT` | division rate (1/hours) | 0.032 |
+| `-RWasteUptake FLOAT` | division rate (1/hours) | 0.032 |
+| `-RWasteThresholdSlowedGrowth FLOAT` | division rate (1/hours) | 0.032 |
+| `-RWasteIntoxicatedCellCycles FLOAT` | division rate (1/hours) | 0.032 |
 
 ####2) Comparison with Data:
 In order to compare the simulation results on the fly with given data, the following command can be used instead:
@@ -62,7 +79,7 @@ The `DATA_FILES` are passed as
 | `-K FILENAME` | day 24: KI67 positive / proliferating cell fraction* |
 | `-T FILENAME` | day 24: TUNEL positive / necrotic cell fraction* |
 | `-E FILENAME` | day 24: COLIV intensity / extra-cellular matrix (ECM) density* |
-* as function of the distance to the outer tumor border
+\* as function of the distance to the outer tumor border
  
 ## Example Data
 The directory `data` contains 4 example data set.
