@@ -41,6 +41,7 @@ nix-tumor3d -x 1 -y 200
 
 The default model parameter values can be modified by passing further arguments:
 
+######Table 1: Model Parameters
 | Argument | Description | Default Value |
 | --- | --- | --- |
 | `-Rdiv FLOAT` | division rate (1/hours) | 0.032 |
@@ -62,13 +63,20 @@ The default model parameter values can be modified by passing further arguments:
 | `-RWasteThresholdSlowedGrowth FLOAT` | division rate (1/hours) | 0.032 |
 | `-RWasteIntoxicatedCellCycles FLOAT` | division rate (1/hours) | 0.032 |
 
+For a complete list of programm arguments run:
+
+```
+nix-tumor3d -h
+```
+
 ####2) Comparison with Data:
 In order to compare the simulation results on the fly with given data, the following command can be used instead:
 
 ```
-nix-compare2d DATA_FILES PARAMETER_LIST
+nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
 ```
-The `DATA_FILES` are passed as
+
+* The `DATA_FILES` are passed as
 
 | Argument | Description |
 | --- | --- |
@@ -80,6 +88,11 @@ The `DATA_FILES` are passed as
 | `-T FILENAME` | day 24: TUNEL positive / necrotic cell fraction* |
 | `-E FILENAME` | day 24: COLIV intensity / extra-cellular matrix (ECM) density* |
 \* as function of the distance to the outer tumor border
+ 
+* The `LIKELIHOOD_THRESHOLD` indicates the value which will stop a running simulation if exeeded and will be returned back. It is passed as 
+  ```-l FLOAT```
+  
+* `PARAMETER_LIST` is an optional list of 0 to 18 values corresponding to  
  
 ## Example Data
 The directory `data` contains 4 example data set.
