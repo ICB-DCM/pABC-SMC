@@ -3,15 +3,18 @@
 Table of Content:
 
 1. [pABC-SMC Scripts](#pabc-smc-scripts)
+  * **MISSING**
+2. [Tumor Growth Simulation Tool](#tumor-growth-simulation-tool)
   * [Compilation & Installation](#compiling--installation)
   * [Usage](#usage)
     * [Tumor Simulation](#1-tumor-simulation)
     * [Comparison with Data](#2-comparison-with-data)
-2. [Tumor Growth Simulation Tool](#tumor-growth-simulation-tool)
 3. [Example Data](#example-data)
 
 
 ## pABC-SMC Scripts
+
+**MISSING**
 
 ## Tumor Growth Simulation Tool
 ### Compiling & Installation
@@ -112,4 +115,11 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
 
  
 ## Example Data
-The directory `data` contains 4 example data set.
+The directory `data` contains 4 example data set with different error models:
+
+  | Files | 1st column (x) | 2nd column (y) | 3rd column (\sigma) |
+  | --- | --- | --- | --- |
+  | `SK-MES1_*.dat` | time (h) / distance (\mu m) | mean | **std** |
+  | `SK-MES1_*.dat.mean` | time (h) / distance (\mu m) | mean | **0.1 * mean** |
+  | `SK-MES1_*.dat.std` | time (h) / distance (\mu m) | mean | **std of mean** |
+  | `SK-MES1_*.dat.minmax` | time (h) / distance (\mu m) | mean | **max mean - min mean** |
