@@ -6,8 +6,8 @@
 
 #include "Agent.h"
 #include "CellProcesses.h"
-#include "Vessel_Unit.h"
-#include "Vessel_Graph.h"
+#include "VesselUnit.h"
+#include "VesselGraph.h"
 
 //#define COMMENTS
 //practical stuffs

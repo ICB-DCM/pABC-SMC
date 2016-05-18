@@ -112,15 +112,15 @@ am_nix_compare2d_OBJECTS = nix_compare2d-compare.$(OBJEXT) \
 	nix_compare2d-Angiogenesis.$(OBJEXT) \
 	nix_compare2d-CellProcesses.$(OBJEXT) \
 	nix_compare2d-DiffusionReactionEquation.$(OBJEXT) \
-	nix_compare2d-finiteDifferences.$(OBJEXT) \
+	nix_compare2d-FiniteDifferences.$(OBJEXT) \
 	nix_compare2d-Interpolation.$(OBJEXT) \
 	nix_compare2d-Mathematix.$(OBJEXT) \
 	nix_compare2d-Molecule.$(OBJEXT) \
 	nix_compare2d-SparseMatrix.$(OBJEXT) \
 	nix_compare2d-Substrate.$(OBJEXT) \
 	nix_compare2d-EpsIO.$(OBJEXT) nix_compare2d-PovrayIO.$(OBJEXT) \
-	nix_compare2d-Vessel_Graph.$(OBJEXT) \
-	nix_compare2d-Vessel_Unit.$(OBJEXT) \
+	nix_compare2d-VesselGraph.$(OBJEXT) \
+	nix_compare2d-VesselUnit.$(OBJEXT) \
 	nix_compare2d-VesselNetwork.$(OBJEXT) \
 	nix_compare2d-VoronoiDiagramExtended.$(OBJEXT)
 nix_compare2d_OBJECTS = $(am_nix_compare2d_OBJECTS)
@@ -140,15 +140,15 @@ am_nix_compare3d_OBJECTS = nix_compare3d-compare.$(OBJEXT) \
 	nix_compare3d-Angiogenesis.$(OBJEXT) \
 	nix_compare3d-CellProcesses.$(OBJEXT) \
 	nix_compare3d-DiffusionReactionEquation.$(OBJEXT) \
-	nix_compare3d-finiteDifferences.$(OBJEXT) \
+	nix_compare3d-FiniteDifferences.$(OBJEXT) \
 	nix_compare3d-Interpolation.$(OBJEXT) \
 	nix_compare3d-Mathematix.$(OBJEXT) \
 	nix_compare3d-Molecule.$(OBJEXT) \
 	nix_compare3d-SparseMatrix.$(OBJEXT) \
 	nix_compare3d-Substrate.$(OBJEXT) \
 	nix_compare3d-EpsIO.$(OBJEXT) nix_compare3d-PovrayIO.$(OBJEXT) \
-	nix_compare3d-Vessel_Graph.$(OBJEXT) \
-	nix_compare3d-Vessel_Unit.$(OBJEXT) \
+	nix_compare3d-VesselGraph.$(OBJEXT) \
+	nix_compare3d-VesselUnit.$(OBJEXT) \
 	nix_compare3d-VesselNetwork.$(OBJEXT) \
 	nix_compare3d-VoronoiDiagramExtended.$(OBJEXT)
 nix_compare3d_OBJECTS = $(am_nix_compare3d_OBJECTS)
@@ -157,20 +157,20 @@ nix_compare3d_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CXXLD) \
 	$(nix_compare3d_CXXFLAGS) $(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) \
 	-o $@
-am_nix_tumor2d_OBJECTS = nix_tumor2d-main.$(OBJEXT) \
+am_nix_tumor2d_OBJECTS = nix_tumor2d-tumor.$(OBJEXT) \
 	nix_tumor2d-AsciiIO.$(OBJEXT) nix_tumor2d-Montecarlo.$(OBJEXT) \
 	nix_tumor2d-Agent.$(OBJEXT) nix_tumor2d-Angiogenesis.$(OBJEXT) \
 	nix_tumor2d-CellProcesses.$(OBJEXT) \
 	nix_tumor2d-DiffusionReactionEquation.$(OBJEXT) \
-	nix_tumor2d-finiteDifferences.$(OBJEXT) \
+	nix_tumor2d-FiniteDifferences.$(OBJEXT) \
 	nix_tumor2d-Interpolation.$(OBJEXT) \
 	nix_tumor2d-Mathematix.$(OBJEXT) \
 	nix_tumor2d-Molecule.$(OBJEXT) \
 	nix_tumor2d-SparseMatrix.$(OBJEXT) \
 	nix_tumor2d-Substrate.$(OBJEXT) nix_tumor2d-EpsIO.$(OBJEXT) \
 	nix_tumor2d-PovrayIO.$(OBJEXT) \
-	nix_tumor2d-Vessel_Graph.$(OBJEXT) \
-	nix_tumor2d-Vessel_Unit.$(OBJEXT) \
+	nix_tumor2d-VesselGraph.$(OBJEXT) \
+	nix_tumor2d-VesselUnit.$(OBJEXT) \
 	nix_tumor2d-VesselNetwork.$(OBJEXT) \
 	nix_tumor2d-VoronoiDiagramExtended.$(OBJEXT)
 nix_tumor2d_OBJECTS = $(am_nix_tumor2d_OBJECTS)
@@ -178,20 +178,20 @@ nix_tumor2d_DEPENDENCIES = ../libnix/libnix.la
 nix_tumor2d_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CXXLD) $(nix_tumor2d_CXXFLAGS) \
 	$(CXXFLAGS) $(AM_LDFLAGS) $(LDFLAGS) -o $@
-am_nix_tumor3d_OBJECTS = nix_tumor3d-main.$(OBJEXT) \
+am_nix_tumor3d_OBJECTS = nix_tumor3d-tumor.$(OBJEXT) \
 	nix_tumor3d-AsciiIO.$(OBJEXT) nix_tumor3d-Montecarlo.$(OBJEXT) \
 	nix_tumor3d-Agent.$(OBJEXT) nix_tumor3d-Angiogenesis.$(OBJEXT) \
 	nix_tumor3d-CellProcesses.$(OBJEXT) \
 	nix_tumor3d-DiffusionReactionEquation.$(OBJEXT) \
-	nix_tumor3d-finiteDifferences.$(OBJEXT) \
+	nix_tumor3d-FiniteDifferences.$(OBJEXT) \
 	nix_tumor3d-Interpolation.$(OBJEXT) \
 	nix_tumor3d-Mathematix.$(OBJEXT) \
 	nix_tumor3d-Molecule.$(OBJEXT) \
 	nix_tumor3d-SparseMatrix.$(OBJEXT) \
 	nix_tumor3d-Substrate.$(OBJEXT) nix_tumor3d-EpsIO.$(OBJEXT) \
 	nix_tumor3d-PovrayIO.$(OBJEXT) \
-	nix_tumor3d-Vessel_Graph.$(OBJEXT) \
-	nix_tumor3d-Vessel_Unit.$(OBJEXT) \
+	nix_tumor3d-VesselGraph.$(OBJEXT) \
+	nix_tumor3d-VesselUnit.$(OBJEXT) \
 	nix_tumor3d-VesselNetwork.$(OBJEXT) \
 	nix_tumor3d-VoronoiDiagramExtended.$(OBJEXT)
 nix_tumor3d_OBJECTS = $(am_nix_tumor3d_OBJECTS)
@@ -384,16 +384,16 @@ top_build_prefix = @top_build_prefix@
 top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = subdir-objects
-nix_tumor3d_SOURCES = main.cpp AsciiIO.cpp Montecarlo.cpp Agent.cpp Angiogenesis.cpp CellProcesses.cpp DiffusionReactionEquation.cpp finiteDifferences.cpp Interpolation.cpp Mathematix.cpp Molecule.cpp SparseMatrix.cpp Substrate.cpp EpsIO.cpp PovrayIO.cpp Vessel_Graph.cpp Vessel_Unit.cpp VesselNetwork.cpp VoronoiDiagramExtended.cpp
+nix_tumor3d_SOURCES = tumor.cpp AsciiIO.cpp Montecarlo.cpp Agent.cpp Angiogenesis.cpp CellProcesses.cpp DiffusionReactionEquation.cpp FiniteDifferences.cpp Interpolation.cpp Mathematix.cpp Molecule.cpp SparseMatrix.cpp Substrate.cpp EpsIO.cpp PovrayIO.cpp VesselGraph.cpp VesselUnit.cpp VesselNetwork.cpp VoronoiDiagramExtended.cpp
 nix_tumor3d_LDADD = -lm  ../libnix/libnix.la
 nix_tumor3d_CXXFLAGS = -DDIMENSIONS=3 -g
-nix_tumor2d_SOURCES = main.cpp AsciiIO.cpp Montecarlo.cpp Agent.cpp Angiogenesis.cpp CellProcesses.cpp DiffusionReactionEquation.cpp finiteDifferences.cpp Interpolation.cpp Mathematix.cpp Molecule.cpp SparseMatrix.cpp Substrate.cpp EpsIO.cpp PovrayIO.cpp Vessel_Graph.cpp Vessel_Unit.cpp VesselNetwork.cpp VoronoiDiagramExtended.cpp
+nix_tumor2d_SOURCES = tumor.cpp AsciiIO.cpp Montecarlo.cpp Agent.cpp Angiogenesis.cpp CellProcesses.cpp DiffusionReactionEquation.cpp FiniteDifferences.cpp Interpolation.cpp Mathematix.cpp Molecule.cpp SparseMatrix.cpp Substrate.cpp EpsIO.cpp PovrayIO.cpp VesselGraph.cpp VesselUnit.cpp VesselNetwork.cpp VoronoiDiagramExtended.cpp
 nix_tumor2d_LDADD = -lm  ../libnix/libnix.la
 nix_tumor2d_CXXFLAGS = -DDIMENSIONS=2
-nix_compare3d_SOURCES = compare.cpp AsciiIO.cpp Montecarlo.cpp Agent.cpp Angiogenesis.cpp CellProcesses.cpp DiffusionReactionEquation.cpp finiteDifferences.cpp Interpolation.cpp Mathematix.cpp Molecule.cpp SparseMatrix.cpp Substrate.cpp EpsIO.cpp PovrayIO.cpp Vessel_Graph.cpp Vessel_Unit.cpp VesselNetwork.cpp VoronoiDiagramExtended.cpp
+nix_compare3d_SOURCES = compare.cpp AsciiIO.cpp Montecarlo.cpp Agent.cpp Angiogenesis.cpp CellProcesses.cpp DiffusionReactionEquation.cpp FiniteDifferences.cpp Interpolation.cpp Mathematix.cpp Molecule.cpp SparseMatrix.cpp Substrate.cpp EpsIO.cpp PovrayIO.cpp VesselGraph.cpp VesselUnit.cpp VesselNetwork.cpp VoronoiDiagramExtended.cpp
 nix_compare3d_LDADD = -lm ../libnix/libnix.la
 nix_compare3d_CXXFLAGS = -DDIMENSIONS=3 -g
-nix_compare2d_SOURCES = compare.cpp AsciiIO.cpp Montecarlo.cpp Agent.cpp Angiogenesis.cpp CellProcesses.cpp DiffusionReactionEquation.cpp finiteDifferences.cpp Interpolation.cpp Mathematix.cpp Molecule.cpp SparseMatrix.cpp Substrate.cpp EpsIO.cpp PovrayIO.cpp Vessel_Graph.cpp Vessel_Unit.cpp VesselNetwork.cpp VoronoiDiagramExtended.cpp
+nix_compare2d_SOURCES = compare.cpp AsciiIO.cpp Montecarlo.cpp Agent.cpp Angiogenesis.cpp CellProcesses.cpp DiffusionReactionEquation.cpp FiniteDifferences.cpp Interpolation.cpp Mathematix.cpp Molecule.cpp SparseMatrix.cpp Substrate.cpp EpsIO.cpp PovrayIO.cpp VesselGraph.cpp VesselUnit.cpp VesselNetwork.cpp VoronoiDiagramExtended.cpp
 nix_compare2d_LDADD = -lm ../libnix/libnix.la
 nix_compare2d_CXXFLAGS = -DDIMENSIONS=2 -g
 all: all-am
@@ -507,6 +507,7 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-CellProcesses.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-DiffusionReactionEquation.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-EpsIO.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-FiniteDifferences.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-Interpolation.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-Mathematix.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-Molecule.Po@am__quote@
@@ -514,18 +515,18 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-PovrayIO.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-SparseMatrix.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-Substrate.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-VesselGraph.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-VesselNetwork.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-Vessel_Graph.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-Vessel_Unit.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-VesselUnit.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-VoronoiDiagramExtended.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-compare.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare2d-finiteDifferences.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-Agent.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-Angiogenesis.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-AsciiIO.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-CellProcesses.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-DiffusionReactionEquation.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-EpsIO.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-FiniteDifferences.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-Interpolation.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-Mathematix.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-Molecule.Po@am__quote@
@@ -533,18 +534,18 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-PovrayIO.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-SparseMatrix.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-Substrate.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-VesselGraph.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-VesselNetwork.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-Vessel_Graph.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-Vessel_Unit.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-VesselUnit.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-VoronoiDiagramExtended.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-compare.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_compare3d-finiteDifferences.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-Agent.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-Angiogenesis.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-AsciiIO.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-CellProcesses.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-DiffusionReactionEquation.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-EpsIO.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-FiniteDifferences.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-Interpolation.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-Mathematix.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-Molecule.Po@am__quote@
@@ -552,18 +553,18 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-PovrayIO.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-SparseMatrix.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-Substrate.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-VesselGraph.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-VesselNetwork.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-Vessel_Graph.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-Vessel_Unit.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-VesselUnit.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-VoronoiDiagramExtended.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-finiteDifferences.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor2d-tumor.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-Agent.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-Angiogenesis.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-AsciiIO.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-CellProcesses.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-DiffusionReactionEquation.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-EpsIO.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-FiniteDifferences.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-Interpolation.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-Mathematix.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-Molecule.Po@am__quote@
@@ -571,12 +572,11 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-PovrayIO.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-SparseMatrix.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-Substrate.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-VesselGraph.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-VesselNetwork.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-Vessel_Graph.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-Vessel_Unit.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-VesselUnit.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-VoronoiDiagramExtended.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-finiteDifferences.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/nix_tumor3d-tumor.Po@am__quote@
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -700,19 +700,19 @@ nix_compare2d-DiffusionReactionEquation.obj: DiffusionReactionEquation.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-DiffusionReactionEquation.obj `if test -f 'DiffusionReactionEquation.cpp'; then $(CYGPATH_W) 'DiffusionReactionEquation.cpp'; else $(CYGPATH_W) '$(srcdir)/DiffusionReactionEquation.cpp'; fi`
 
-nix_compare2d-finiteDifferences.o: finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-finiteDifferences.o -MD -MP -MF $(DEPDIR)/nix_compare2d-finiteDifferences.Tpo -c -o nix_compare2d-finiteDifferences.o `test -f 'finiteDifferences.cpp' || echo '$(srcdir)/'`finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-finiteDifferences.Tpo $(DEPDIR)/nix_compare2d-finiteDifferences.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='finiteDifferences.cpp' object='nix_compare2d-finiteDifferences.o' libtool=no @AMDEPBACKSLASH@
+nix_compare2d-FiniteDifferences.o: FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-FiniteDifferences.o -MD -MP -MF $(DEPDIR)/nix_compare2d-FiniteDifferences.Tpo -c -o nix_compare2d-FiniteDifferences.o `test -f 'FiniteDifferences.cpp' || echo '$(srcdir)/'`FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-FiniteDifferences.Tpo $(DEPDIR)/nix_compare2d-FiniteDifferences.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='FiniteDifferences.cpp' object='nix_compare2d-FiniteDifferences.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-finiteDifferences.o `test -f 'finiteDifferences.cpp' || echo '$(srcdir)/'`finiteDifferences.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-FiniteDifferences.o `test -f 'FiniteDifferences.cpp' || echo '$(srcdir)/'`FiniteDifferences.cpp
 
-nix_compare2d-finiteDifferences.obj: finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-finiteDifferences.obj -MD -MP -MF $(DEPDIR)/nix_compare2d-finiteDifferences.Tpo -c -o nix_compare2d-finiteDifferences.obj `if test -f 'finiteDifferences.cpp'; then $(CYGPATH_W) 'finiteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/finiteDifferences.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-finiteDifferences.Tpo $(DEPDIR)/nix_compare2d-finiteDifferences.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='finiteDifferences.cpp' object='nix_compare2d-finiteDifferences.obj' libtool=no @AMDEPBACKSLASH@
+nix_compare2d-FiniteDifferences.obj: FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-FiniteDifferences.obj -MD -MP -MF $(DEPDIR)/nix_compare2d-FiniteDifferences.Tpo -c -o nix_compare2d-FiniteDifferences.obj `if test -f 'FiniteDifferences.cpp'; then $(CYGPATH_W) 'FiniteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/FiniteDifferences.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-FiniteDifferences.Tpo $(DEPDIR)/nix_compare2d-FiniteDifferences.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='FiniteDifferences.cpp' object='nix_compare2d-FiniteDifferences.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-finiteDifferences.obj `if test -f 'finiteDifferences.cpp'; then $(CYGPATH_W) 'finiteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/finiteDifferences.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-FiniteDifferences.obj `if test -f 'FiniteDifferences.cpp'; then $(CYGPATH_W) 'FiniteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/FiniteDifferences.cpp'; fi`
 
 nix_compare2d-Interpolation.o: Interpolation.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-Interpolation.o -MD -MP -MF $(DEPDIR)/nix_compare2d-Interpolation.Tpo -c -o nix_compare2d-Interpolation.o `test -f 'Interpolation.cpp' || echo '$(srcdir)/'`Interpolation.cpp
@@ -812,33 +812,33 @@ nix_compare2d-PovrayIO.obj: PovrayIO.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-PovrayIO.obj `if test -f 'PovrayIO.cpp'; then $(CYGPATH_W) 'PovrayIO.cpp'; else $(CYGPATH_W) '$(srcdir)/PovrayIO.cpp'; fi`
 
-nix_compare2d-Vessel_Graph.o: Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-Vessel_Graph.o -MD -MP -MF $(DEPDIR)/nix_compare2d-Vessel_Graph.Tpo -c -o nix_compare2d-Vessel_Graph.o `test -f 'Vessel_Graph.cpp' || echo '$(srcdir)/'`Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-Vessel_Graph.Tpo $(DEPDIR)/nix_compare2d-Vessel_Graph.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Graph.cpp' object='nix_compare2d-Vessel_Graph.o' libtool=no @AMDEPBACKSLASH@
+nix_compare2d-VesselGraph.o: VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-VesselGraph.o -MD -MP -MF $(DEPDIR)/nix_compare2d-VesselGraph.Tpo -c -o nix_compare2d-VesselGraph.o `test -f 'VesselGraph.cpp' || echo '$(srcdir)/'`VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-VesselGraph.Tpo $(DEPDIR)/nix_compare2d-VesselGraph.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselGraph.cpp' object='nix_compare2d-VesselGraph.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-Vessel_Graph.o `test -f 'Vessel_Graph.cpp' || echo '$(srcdir)/'`Vessel_Graph.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-VesselGraph.o `test -f 'VesselGraph.cpp' || echo '$(srcdir)/'`VesselGraph.cpp
 
-nix_compare2d-Vessel_Graph.obj: Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-Vessel_Graph.obj -MD -MP -MF $(DEPDIR)/nix_compare2d-Vessel_Graph.Tpo -c -o nix_compare2d-Vessel_Graph.obj `if test -f 'Vessel_Graph.cpp'; then $(CYGPATH_W) 'Vessel_Graph.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Graph.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-Vessel_Graph.Tpo $(DEPDIR)/nix_compare2d-Vessel_Graph.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Graph.cpp' object='nix_compare2d-Vessel_Graph.obj' libtool=no @AMDEPBACKSLASH@
+nix_compare2d-VesselGraph.obj: VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-VesselGraph.obj -MD -MP -MF $(DEPDIR)/nix_compare2d-VesselGraph.Tpo -c -o nix_compare2d-VesselGraph.obj `if test -f 'VesselGraph.cpp'; then $(CYGPATH_W) 'VesselGraph.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselGraph.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-VesselGraph.Tpo $(DEPDIR)/nix_compare2d-VesselGraph.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselGraph.cpp' object='nix_compare2d-VesselGraph.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-Vessel_Graph.obj `if test -f 'Vessel_Graph.cpp'; then $(CYGPATH_W) 'Vessel_Graph.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Graph.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-VesselGraph.obj `if test -f 'VesselGraph.cpp'; then $(CYGPATH_W) 'VesselGraph.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselGraph.cpp'; fi`
 
-nix_compare2d-Vessel_Unit.o: Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-Vessel_Unit.o -MD -MP -MF $(DEPDIR)/nix_compare2d-Vessel_Unit.Tpo -c -o nix_compare2d-Vessel_Unit.o `test -f 'Vessel_Unit.cpp' || echo '$(srcdir)/'`Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-Vessel_Unit.Tpo $(DEPDIR)/nix_compare2d-Vessel_Unit.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Unit.cpp' object='nix_compare2d-Vessel_Unit.o' libtool=no @AMDEPBACKSLASH@
+nix_compare2d-VesselUnit.o: VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-VesselUnit.o -MD -MP -MF $(DEPDIR)/nix_compare2d-VesselUnit.Tpo -c -o nix_compare2d-VesselUnit.o `test -f 'VesselUnit.cpp' || echo '$(srcdir)/'`VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-VesselUnit.Tpo $(DEPDIR)/nix_compare2d-VesselUnit.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselUnit.cpp' object='nix_compare2d-VesselUnit.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-Vessel_Unit.o `test -f 'Vessel_Unit.cpp' || echo '$(srcdir)/'`Vessel_Unit.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-VesselUnit.o `test -f 'VesselUnit.cpp' || echo '$(srcdir)/'`VesselUnit.cpp
 
-nix_compare2d-Vessel_Unit.obj: Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-Vessel_Unit.obj -MD -MP -MF $(DEPDIR)/nix_compare2d-Vessel_Unit.Tpo -c -o nix_compare2d-Vessel_Unit.obj `if test -f 'Vessel_Unit.cpp'; then $(CYGPATH_W) 'Vessel_Unit.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Unit.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-Vessel_Unit.Tpo $(DEPDIR)/nix_compare2d-Vessel_Unit.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Unit.cpp' object='nix_compare2d-Vessel_Unit.obj' libtool=no @AMDEPBACKSLASH@
+nix_compare2d-VesselUnit.obj: VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-VesselUnit.obj -MD -MP -MF $(DEPDIR)/nix_compare2d-VesselUnit.Tpo -c -o nix_compare2d-VesselUnit.obj `if test -f 'VesselUnit.cpp'; then $(CYGPATH_W) 'VesselUnit.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselUnit.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare2d-VesselUnit.Tpo $(DEPDIR)/nix_compare2d-VesselUnit.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselUnit.cpp' object='nix_compare2d-VesselUnit.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-Vessel_Unit.obj `if test -f 'Vessel_Unit.cpp'; then $(CYGPATH_W) 'Vessel_Unit.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Unit.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare2d-VesselUnit.obj `if test -f 'VesselUnit.cpp'; then $(CYGPATH_W) 'VesselUnit.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselUnit.cpp'; fi`
 
 nix_compare2d-VesselNetwork.o: VesselNetwork.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare2d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare2d-VesselNetwork.o -MD -MP -MF $(DEPDIR)/nix_compare2d-VesselNetwork.Tpo -c -o nix_compare2d-VesselNetwork.o `test -f 'VesselNetwork.cpp' || echo '$(srcdir)/'`VesselNetwork.cpp
@@ -966,19 +966,19 @@ nix_compare3d-DiffusionReactionEquation.obj: DiffusionReactionEquation.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-DiffusionReactionEquation.obj `if test -f 'DiffusionReactionEquation.cpp'; then $(CYGPATH_W) 'DiffusionReactionEquation.cpp'; else $(CYGPATH_W) '$(srcdir)/DiffusionReactionEquation.cpp'; fi`
 
-nix_compare3d-finiteDifferences.o: finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-finiteDifferences.o -MD -MP -MF $(DEPDIR)/nix_compare3d-finiteDifferences.Tpo -c -o nix_compare3d-finiteDifferences.o `test -f 'finiteDifferences.cpp' || echo '$(srcdir)/'`finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-finiteDifferences.Tpo $(DEPDIR)/nix_compare3d-finiteDifferences.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='finiteDifferences.cpp' object='nix_compare3d-finiteDifferences.o' libtool=no @AMDEPBACKSLASH@
+nix_compare3d-FiniteDifferences.o: FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-FiniteDifferences.o -MD -MP -MF $(DEPDIR)/nix_compare3d-FiniteDifferences.Tpo -c -o nix_compare3d-FiniteDifferences.o `test -f 'FiniteDifferences.cpp' || echo '$(srcdir)/'`FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-FiniteDifferences.Tpo $(DEPDIR)/nix_compare3d-FiniteDifferences.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='FiniteDifferences.cpp' object='nix_compare3d-FiniteDifferences.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-finiteDifferences.o `test -f 'finiteDifferences.cpp' || echo '$(srcdir)/'`finiteDifferences.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-FiniteDifferences.o `test -f 'FiniteDifferences.cpp' || echo '$(srcdir)/'`FiniteDifferences.cpp
 
-nix_compare3d-finiteDifferences.obj: finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-finiteDifferences.obj -MD -MP -MF $(DEPDIR)/nix_compare3d-finiteDifferences.Tpo -c -o nix_compare3d-finiteDifferences.obj `if test -f 'finiteDifferences.cpp'; then $(CYGPATH_W) 'finiteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/finiteDifferences.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-finiteDifferences.Tpo $(DEPDIR)/nix_compare3d-finiteDifferences.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='finiteDifferences.cpp' object='nix_compare3d-finiteDifferences.obj' libtool=no @AMDEPBACKSLASH@
+nix_compare3d-FiniteDifferences.obj: FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-FiniteDifferences.obj -MD -MP -MF $(DEPDIR)/nix_compare3d-FiniteDifferences.Tpo -c -o nix_compare3d-FiniteDifferences.obj `if test -f 'FiniteDifferences.cpp'; then $(CYGPATH_W) 'FiniteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/FiniteDifferences.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-FiniteDifferences.Tpo $(DEPDIR)/nix_compare3d-FiniteDifferences.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='FiniteDifferences.cpp' object='nix_compare3d-FiniteDifferences.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-finiteDifferences.obj `if test -f 'finiteDifferences.cpp'; then $(CYGPATH_W) 'finiteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/finiteDifferences.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-FiniteDifferences.obj `if test -f 'FiniteDifferences.cpp'; then $(CYGPATH_W) 'FiniteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/FiniteDifferences.cpp'; fi`
 
 nix_compare3d-Interpolation.o: Interpolation.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-Interpolation.o -MD -MP -MF $(DEPDIR)/nix_compare3d-Interpolation.Tpo -c -o nix_compare3d-Interpolation.o `test -f 'Interpolation.cpp' || echo '$(srcdir)/'`Interpolation.cpp
@@ -1078,33 +1078,33 @@ nix_compare3d-PovrayIO.obj: PovrayIO.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-PovrayIO.obj `if test -f 'PovrayIO.cpp'; then $(CYGPATH_W) 'PovrayIO.cpp'; else $(CYGPATH_W) '$(srcdir)/PovrayIO.cpp'; fi`
 
-nix_compare3d-Vessel_Graph.o: Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-Vessel_Graph.o -MD -MP -MF $(DEPDIR)/nix_compare3d-Vessel_Graph.Tpo -c -o nix_compare3d-Vessel_Graph.o `test -f 'Vessel_Graph.cpp' || echo '$(srcdir)/'`Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-Vessel_Graph.Tpo $(DEPDIR)/nix_compare3d-Vessel_Graph.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Graph.cpp' object='nix_compare3d-Vessel_Graph.o' libtool=no @AMDEPBACKSLASH@
+nix_compare3d-VesselGraph.o: VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-VesselGraph.o -MD -MP -MF $(DEPDIR)/nix_compare3d-VesselGraph.Tpo -c -o nix_compare3d-VesselGraph.o `test -f 'VesselGraph.cpp' || echo '$(srcdir)/'`VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-VesselGraph.Tpo $(DEPDIR)/nix_compare3d-VesselGraph.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselGraph.cpp' object='nix_compare3d-VesselGraph.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-Vessel_Graph.o `test -f 'Vessel_Graph.cpp' || echo '$(srcdir)/'`Vessel_Graph.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-VesselGraph.o `test -f 'VesselGraph.cpp' || echo '$(srcdir)/'`VesselGraph.cpp
 
-nix_compare3d-Vessel_Graph.obj: Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-Vessel_Graph.obj -MD -MP -MF $(DEPDIR)/nix_compare3d-Vessel_Graph.Tpo -c -o nix_compare3d-Vessel_Graph.obj `if test -f 'Vessel_Graph.cpp'; then $(CYGPATH_W) 'Vessel_Graph.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Graph.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-Vessel_Graph.Tpo $(DEPDIR)/nix_compare3d-Vessel_Graph.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Graph.cpp' object='nix_compare3d-Vessel_Graph.obj' libtool=no @AMDEPBACKSLASH@
+nix_compare3d-VesselGraph.obj: VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-VesselGraph.obj -MD -MP -MF $(DEPDIR)/nix_compare3d-VesselGraph.Tpo -c -o nix_compare3d-VesselGraph.obj `if test -f 'VesselGraph.cpp'; then $(CYGPATH_W) 'VesselGraph.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselGraph.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-VesselGraph.Tpo $(DEPDIR)/nix_compare3d-VesselGraph.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselGraph.cpp' object='nix_compare3d-VesselGraph.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-Vessel_Graph.obj `if test -f 'Vessel_Graph.cpp'; then $(CYGPATH_W) 'Vessel_Graph.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Graph.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-VesselGraph.obj `if test -f 'VesselGraph.cpp'; then $(CYGPATH_W) 'VesselGraph.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselGraph.cpp'; fi`
 
-nix_compare3d-Vessel_Unit.o: Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-Vessel_Unit.o -MD -MP -MF $(DEPDIR)/nix_compare3d-Vessel_Unit.Tpo -c -o nix_compare3d-Vessel_Unit.o `test -f 'Vessel_Unit.cpp' || echo '$(srcdir)/'`Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-Vessel_Unit.Tpo $(DEPDIR)/nix_compare3d-Vessel_Unit.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Unit.cpp' object='nix_compare3d-Vessel_Unit.o' libtool=no @AMDEPBACKSLASH@
+nix_compare3d-VesselUnit.o: VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-VesselUnit.o -MD -MP -MF $(DEPDIR)/nix_compare3d-VesselUnit.Tpo -c -o nix_compare3d-VesselUnit.o `test -f 'VesselUnit.cpp' || echo '$(srcdir)/'`VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-VesselUnit.Tpo $(DEPDIR)/nix_compare3d-VesselUnit.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselUnit.cpp' object='nix_compare3d-VesselUnit.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-Vessel_Unit.o `test -f 'Vessel_Unit.cpp' || echo '$(srcdir)/'`Vessel_Unit.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-VesselUnit.o `test -f 'VesselUnit.cpp' || echo '$(srcdir)/'`VesselUnit.cpp
 
-nix_compare3d-Vessel_Unit.obj: Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-Vessel_Unit.obj -MD -MP -MF $(DEPDIR)/nix_compare3d-Vessel_Unit.Tpo -c -o nix_compare3d-Vessel_Unit.obj `if test -f 'Vessel_Unit.cpp'; then $(CYGPATH_W) 'Vessel_Unit.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Unit.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-Vessel_Unit.Tpo $(DEPDIR)/nix_compare3d-Vessel_Unit.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Unit.cpp' object='nix_compare3d-Vessel_Unit.obj' libtool=no @AMDEPBACKSLASH@
+nix_compare3d-VesselUnit.obj: VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-VesselUnit.obj -MD -MP -MF $(DEPDIR)/nix_compare3d-VesselUnit.Tpo -c -o nix_compare3d-VesselUnit.obj `if test -f 'VesselUnit.cpp'; then $(CYGPATH_W) 'VesselUnit.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselUnit.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_compare3d-VesselUnit.Tpo $(DEPDIR)/nix_compare3d-VesselUnit.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselUnit.cpp' object='nix_compare3d-VesselUnit.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-Vessel_Unit.obj `if test -f 'Vessel_Unit.cpp'; then $(CYGPATH_W) 'Vessel_Unit.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Unit.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-VesselUnit.obj `if test -f 'VesselUnit.cpp'; then $(CYGPATH_W) 'VesselUnit.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselUnit.cpp'; fi`
 
 nix_compare3d-VesselNetwork.o: VesselNetwork.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -MT nix_compare3d-VesselNetwork.o -MD -MP -MF $(DEPDIR)/nix_compare3d-VesselNetwork.Tpo -c -o nix_compare3d-VesselNetwork.o `test -f 'VesselNetwork.cpp' || echo '$(srcdir)/'`VesselNetwork.cpp
@@ -1134,19 +1134,19 @@ nix_compare3d-VoronoiDiagramExtended.obj: VoronoiDiagramExtended.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_compare3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_compare3d-VoronoiDiagramExtended.obj `if test -f 'VoronoiDiagramExtended.cpp'; then $(CYGPATH_W) 'VoronoiDiagramExtended.cpp'; else $(CYGPATH_W) '$(srcdir)/VoronoiDiagramExtended.cpp'; fi`
 
-nix_tumor2d-main.o: main.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-main.o -MD -MP -MF $(DEPDIR)/nix_tumor2d-main.Tpo -c -o nix_tumor2d-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-main.Tpo $(DEPDIR)/nix_tumor2d-main.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='main.cpp' object='nix_tumor2d-main.o' libtool=no @AMDEPBACKSLASH@
+nix_tumor2d-tumor.o: tumor.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-tumor.o -MD -MP -MF $(DEPDIR)/nix_tumor2d-tumor.Tpo -c -o nix_tumor2d-tumor.o `test -f 'tumor.cpp' || echo '$(srcdir)/'`tumor.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-tumor.Tpo $(DEPDIR)/nix_tumor2d-tumor.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='tumor.cpp' object='nix_tumor2d-tumor.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-tumor.o `test -f 'tumor.cpp' || echo '$(srcdir)/'`tumor.cpp
 
-nix_tumor2d-main.obj: main.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-main.obj -MD -MP -MF $(DEPDIR)/nix_tumor2d-main.Tpo -c -o nix_tumor2d-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-main.Tpo $(DEPDIR)/nix_tumor2d-main.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='main.cpp' object='nix_tumor2d-main.obj' libtool=no @AMDEPBACKSLASH@
+nix_tumor2d-tumor.obj: tumor.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-tumor.obj -MD -MP -MF $(DEPDIR)/nix_tumor2d-tumor.Tpo -c -o nix_tumor2d-tumor.obj `if test -f 'tumor.cpp'; then $(CYGPATH_W) 'tumor.cpp'; else $(CYGPATH_W) '$(srcdir)/tumor.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-tumor.Tpo $(DEPDIR)/nix_tumor2d-tumor.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='tumor.cpp' object='nix_tumor2d-tumor.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-tumor.obj `if test -f 'tumor.cpp'; then $(CYGPATH_W) 'tumor.cpp'; else $(CYGPATH_W) '$(srcdir)/tumor.cpp'; fi`
 
 nix_tumor2d-AsciiIO.o: AsciiIO.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-AsciiIO.o -MD -MP -MF $(DEPDIR)/nix_tumor2d-AsciiIO.Tpo -c -o nix_tumor2d-AsciiIO.o `test -f 'AsciiIO.cpp' || echo '$(srcdir)/'`AsciiIO.cpp
@@ -1232,19 +1232,19 @@ nix_tumor2d-DiffusionReactionEquation.obj: DiffusionReactionEquation.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-DiffusionReactionEquation.obj `if test -f 'DiffusionReactionEquation.cpp'; then $(CYGPATH_W) 'DiffusionReactionEquation.cpp'; else $(CYGPATH_W) '$(srcdir)/DiffusionReactionEquation.cpp'; fi`
 
-nix_tumor2d-finiteDifferences.o: finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-finiteDifferences.o -MD -MP -MF $(DEPDIR)/nix_tumor2d-finiteDifferences.Tpo -c -o nix_tumor2d-finiteDifferences.o `test -f 'finiteDifferences.cpp' || echo '$(srcdir)/'`finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-finiteDifferences.Tpo $(DEPDIR)/nix_tumor2d-finiteDifferences.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='finiteDifferences.cpp' object='nix_tumor2d-finiteDifferences.o' libtool=no @AMDEPBACKSLASH@
+nix_tumor2d-FiniteDifferences.o: FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-FiniteDifferences.o -MD -MP -MF $(DEPDIR)/nix_tumor2d-FiniteDifferences.Tpo -c -o nix_tumor2d-FiniteDifferences.o `test -f 'FiniteDifferences.cpp' || echo '$(srcdir)/'`FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-FiniteDifferences.Tpo $(DEPDIR)/nix_tumor2d-FiniteDifferences.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='FiniteDifferences.cpp' object='nix_tumor2d-FiniteDifferences.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-finiteDifferences.o `test -f 'finiteDifferences.cpp' || echo '$(srcdir)/'`finiteDifferences.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-FiniteDifferences.o `test -f 'FiniteDifferences.cpp' || echo '$(srcdir)/'`FiniteDifferences.cpp
 
-nix_tumor2d-finiteDifferences.obj: finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-finiteDifferences.obj -MD -MP -MF $(DEPDIR)/nix_tumor2d-finiteDifferences.Tpo -c -o nix_tumor2d-finiteDifferences.obj `if test -f 'finiteDifferences.cpp'; then $(CYGPATH_W) 'finiteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/finiteDifferences.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-finiteDifferences.Tpo $(DEPDIR)/nix_tumor2d-finiteDifferences.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='finiteDifferences.cpp' object='nix_tumor2d-finiteDifferences.obj' libtool=no @AMDEPBACKSLASH@
+nix_tumor2d-FiniteDifferences.obj: FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-FiniteDifferences.obj -MD -MP -MF $(DEPDIR)/nix_tumor2d-FiniteDifferences.Tpo -c -o nix_tumor2d-FiniteDifferences.obj `if test -f 'FiniteDifferences.cpp'; then $(CYGPATH_W) 'FiniteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/FiniteDifferences.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-FiniteDifferences.Tpo $(DEPDIR)/nix_tumor2d-FiniteDifferences.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='FiniteDifferences.cpp' object='nix_tumor2d-FiniteDifferences.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-finiteDifferences.obj `if test -f 'finiteDifferences.cpp'; then $(CYGPATH_W) 'finiteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/finiteDifferences.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-FiniteDifferences.obj `if test -f 'FiniteDifferences.cpp'; then $(CYGPATH_W) 'FiniteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/FiniteDifferences.cpp'; fi`
 
 nix_tumor2d-Interpolation.o: Interpolation.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-Interpolation.o -MD -MP -MF $(DEPDIR)/nix_tumor2d-Interpolation.Tpo -c -o nix_tumor2d-Interpolation.o `test -f 'Interpolation.cpp' || echo '$(srcdir)/'`Interpolation.cpp
@@ -1344,33 +1344,33 @@ nix_tumor2d-PovrayIO.obj: PovrayIO.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-PovrayIO.obj `if test -f 'PovrayIO.cpp'; then $(CYGPATH_W) 'PovrayIO.cpp'; else $(CYGPATH_W) '$(srcdir)/PovrayIO.cpp'; fi`
 
-nix_tumor2d-Vessel_Graph.o: Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-Vessel_Graph.o -MD -MP -MF $(DEPDIR)/nix_tumor2d-Vessel_Graph.Tpo -c -o nix_tumor2d-Vessel_Graph.o `test -f 'Vessel_Graph.cpp' || echo '$(srcdir)/'`Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-Vessel_Graph.Tpo $(DEPDIR)/nix_tumor2d-Vessel_Graph.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Graph.cpp' object='nix_tumor2d-Vessel_Graph.o' libtool=no @AMDEPBACKSLASH@
+nix_tumor2d-VesselGraph.o: VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-VesselGraph.o -MD -MP -MF $(DEPDIR)/nix_tumor2d-VesselGraph.Tpo -c -o nix_tumor2d-VesselGraph.o `test -f 'VesselGraph.cpp' || echo '$(srcdir)/'`VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-VesselGraph.Tpo $(DEPDIR)/nix_tumor2d-VesselGraph.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselGraph.cpp' object='nix_tumor2d-VesselGraph.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-Vessel_Graph.o `test -f 'Vessel_Graph.cpp' || echo '$(srcdir)/'`Vessel_Graph.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-VesselGraph.o `test -f 'VesselGraph.cpp' || echo '$(srcdir)/'`VesselGraph.cpp
 
-nix_tumor2d-Vessel_Graph.obj: Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-Vessel_Graph.obj -MD -MP -MF $(DEPDIR)/nix_tumor2d-Vessel_Graph.Tpo -c -o nix_tumor2d-Vessel_Graph.obj `if test -f 'Vessel_Graph.cpp'; then $(CYGPATH_W) 'Vessel_Graph.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Graph.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-Vessel_Graph.Tpo $(DEPDIR)/nix_tumor2d-Vessel_Graph.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Graph.cpp' object='nix_tumor2d-Vessel_Graph.obj' libtool=no @AMDEPBACKSLASH@
+nix_tumor2d-VesselGraph.obj: VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-VesselGraph.obj -MD -MP -MF $(DEPDIR)/nix_tumor2d-VesselGraph.Tpo -c -o nix_tumor2d-VesselGraph.obj `if test -f 'VesselGraph.cpp'; then $(CYGPATH_W) 'VesselGraph.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselGraph.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-VesselGraph.Tpo $(DEPDIR)/nix_tumor2d-VesselGraph.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselGraph.cpp' object='nix_tumor2d-VesselGraph.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-Vessel_Graph.obj `if test -f 'Vessel_Graph.cpp'; then $(CYGPATH_W) 'Vessel_Graph.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Graph.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-VesselGraph.obj `if test -f 'VesselGraph.cpp'; then $(CYGPATH_W) 'VesselGraph.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselGraph.cpp'; fi`
 
-nix_tumor2d-Vessel_Unit.o: Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-Vessel_Unit.o -MD -MP -MF $(DEPDIR)/nix_tumor2d-Vessel_Unit.Tpo -c -o nix_tumor2d-Vessel_Unit.o `test -f 'Vessel_Unit.cpp' || echo '$(srcdir)/'`Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-Vessel_Unit.Tpo $(DEPDIR)/nix_tumor2d-Vessel_Unit.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Unit.cpp' object='nix_tumor2d-Vessel_Unit.o' libtool=no @AMDEPBACKSLASH@
+nix_tumor2d-VesselUnit.o: VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-VesselUnit.o -MD -MP -MF $(DEPDIR)/nix_tumor2d-VesselUnit.Tpo -c -o nix_tumor2d-VesselUnit.o `test -f 'VesselUnit.cpp' || echo '$(srcdir)/'`VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-VesselUnit.Tpo $(DEPDIR)/nix_tumor2d-VesselUnit.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselUnit.cpp' object='nix_tumor2d-VesselUnit.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-Vessel_Unit.o `test -f 'Vessel_Unit.cpp' || echo '$(srcdir)/'`Vessel_Unit.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-VesselUnit.o `test -f 'VesselUnit.cpp' || echo '$(srcdir)/'`VesselUnit.cpp
 
-nix_tumor2d-Vessel_Unit.obj: Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-Vessel_Unit.obj -MD -MP -MF $(DEPDIR)/nix_tumor2d-Vessel_Unit.Tpo -c -o nix_tumor2d-Vessel_Unit.obj `if test -f 'Vessel_Unit.cpp'; then $(CYGPATH_W) 'Vessel_Unit.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Unit.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-Vessel_Unit.Tpo $(DEPDIR)/nix_tumor2d-Vessel_Unit.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Unit.cpp' object='nix_tumor2d-Vessel_Unit.obj' libtool=no @AMDEPBACKSLASH@
+nix_tumor2d-VesselUnit.obj: VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-VesselUnit.obj -MD -MP -MF $(DEPDIR)/nix_tumor2d-VesselUnit.Tpo -c -o nix_tumor2d-VesselUnit.obj `if test -f 'VesselUnit.cpp'; then $(CYGPATH_W) 'VesselUnit.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselUnit.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor2d-VesselUnit.Tpo $(DEPDIR)/nix_tumor2d-VesselUnit.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselUnit.cpp' object='nix_tumor2d-VesselUnit.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-Vessel_Unit.obj `if test -f 'Vessel_Unit.cpp'; then $(CYGPATH_W) 'Vessel_Unit.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Unit.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-VesselUnit.obj `if test -f 'VesselUnit.cpp'; then $(CYGPATH_W) 'VesselUnit.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselUnit.cpp'; fi`
 
 nix_tumor2d-VesselNetwork.o: VesselNetwork.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor2d-VesselNetwork.o -MD -MP -MF $(DEPDIR)/nix_tumor2d-VesselNetwork.Tpo -c -o nix_tumor2d-VesselNetwork.o `test -f 'VesselNetwork.cpp' || echo '$(srcdir)/'`VesselNetwork.cpp
@@ -1400,19 +1400,19 @@ nix_tumor2d-VoronoiDiagramExtended.obj: VoronoiDiagramExtended.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor2d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor2d-VoronoiDiagramExtended.obj `if test -f 'VoronoiDiagramExtended.cpp'; then $(CYGPATH_W) 'VoronoiDiagramExtended.cpp'; else $(CYGPATH_W) '$(srcdir)/VoronoiDiagramExtended.cpp'; fi`
 
-nix_tumor3d-main.o: main.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-main.o -MD -MP -MF $(DEPDIR)/nix_tumor3d-main.Tpo -c -o nix_tumor3d-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-main.Tpo $(DEPDIR)/nix_tumor3d-main.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='main.cpp' object='nix_tumor3d-main.o' libtool=no @AMDEPBACKSLASH@
+nix_tumor3d-tumor.o: tumor.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-tumor.o -MD -MP -MF $(DEPDIR)/nix_tumor3d-tumor.Tpo -c -o nix_tumor3d-tumor.o `test -f 'tumor.cpp' || echo '$(srcdir)/'`tumor.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-tumor.Tpo $(DEPDIR)/nix_tumor3d-tumor.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='tumor.cpp' object='nix_tumor3d-tumor.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-main.o `test -f 'main.cpp' || echo '$(srcdir)/'`main.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-tumor.o `test -f 'tumor.cpp' || echo '$(srcdir)/'`tumor.cpp
 
-nix_tumor3d-main.obj: main.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-main.obj -MD -MP -MF $(DEPDIR)/nix_tumor3d-main.Tpo -c -o nix_tumor3d-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-main.Tpo $(DEPDIR)/nix_tumor3d-main.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='main.cpp' object='nix_tumor3d-main.obj' libtool=no @AMDEPBACKSLASH@
+nix_tumor3d-tumor.obj: tumor.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-tumor.obj -MD -MP -MF $(DEPDIR)/nix_tumor3d-tumor.Tpo -c -o nix_tumor3d-tumor.obj `if test -f 'tumor.cpp'; then $(CYGPATH_W) 'tumor.cpp'; else $(CYGPATH_W) '$(srcdir)/tumor.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-tumor.Tpo $(DEPDIR)/nix_tumor3d-tumor.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='tumor.cpp' object='nix_tumor3d-tumor.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-main.obj `if test -f 'main.cpp'; then $(CYGPATH_W) 'main.cpp'; else $(CYGPATH_W) '$(srcdir)/main.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-tumor.obj `if test -f 'tumor.cpp'; then $(CYGPATH_W) 'tumor.cpp'; else $(CYGPATH_W) '$(srcdir)/tumor.cpp'; fi`
 
 nix_tumor3d-AsciiIO.o: AsciiIO.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-AsciiIO.o -MD -MP -MF $(DEPDIR)/nix_tumor3d-AsciiIO.Tpo -c -o nix_tumor3d-AsciiIO.o `test -f 'AsciiIO.cpp' || echo '$(srcdir)/'`AsciiIO.cpp
@@ -1498,19 +1498,19 @@ nix_tumor3d-DiffusionReactionEquation.obj: DiffusionReactionEquation.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-DiffusionReactionEquation.obj `if test -f 'DiffusionReactionEquation.cpp'; then $(CYGPATH_W) 'DiffusionReactionEquation.cpp'; else $(CYGPATH_W) '$(srcdir)/DiffusionReactionEquation.cpp'; fi`
 
-nix_tumor3d-finiteDifferences.o: finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-finiteDifferences.o -MD -MP -MF $(DEPDIR)/nix_tumor3d-finiteDifferences.Tpo -c -o nix_tumor3d-finiteDifferences.o `test -f 'finiteDifferences.cpp' || echo '$(srcdir)/'`finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-finiteDifferences.Tpo $(DEPDIR)/nix_tumor3d-finiteDifferences.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='finiteDifferences.cpp' object='nix_tumor3d-finiteDifferences.o' libtool=no @AMDEPBACKSLASH@
+nix_tumor3d-FiniteDifferences.o: FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-FiniteDifferences.o -MD -MP -MF $(DEPDIR)/nix_tumor3d-FiniteDifferences.Tpo -c -o nix_tumor3d-FiniteDifferences.o `test -f 'FiniteDifferences.cpp' || echo '$(srcdir)/'`FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-FiniteDifferences.Tpo $(DEPDIR)/nix_tumor3d-FiniteDifferences.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='FiniteDifferences.cpp' object='nix_tumor3d-FiniteDifferences.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-finiteDifferences.o `test -f 'finiteDifferences.cpp' || echo '$(srcdir)/'`finiteDifferences.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-FiniteDifferences.o `test -f 'FiniteDifferences.cpp' || echo '$(srcdir)/'`FiniteDifferences.cpp
 
-nix_tumor3d-finiteDifferences.obj: finiteDifferences.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-finiteDifferences.obj -MD -MP -MF $(DEPDIR)/nix_tumor3d-finiteDifferences.Tpo -c -o nix_tumor3d-finiteDifferences.obj `if test -f 'finiteDifferences.cpp'; then $(CYGPATH_W) 'finiteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/finiteDifferences.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-finiteDifferences.Tpo $(DEPDIR)/nix_tumor3d-finiteDifferences.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='finiteDifferences.cpp' object='nix_tumor3d-finiteDifferences.obj' libtool=no @AMDEPBACKSLASH@
+nix_tumor3d-FiniteDifferences.obj: FiniteDifferences.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-FiniteDifferences.obj -MD -MP -MF $(DEPDIR)/nix_tumor3d-FiniteDifferences.Tpo -c -o nix_tumor3d-FiniteDifferences.obj `if test -f 'FiniteDifferences.cpp'; then $(CYGPATH_W) 'FiniteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/FiniteDifferences.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-FiniteDifferences.Tpo $(DEPDIR)/nix_tumor3d-FiniteDifferences.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='FiniteDifferences.cpp' object='nix_tumor3d-FiniteDifferences.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-finiteDifferences.obj `if test -f 'finiteDifferences.cpp'; then $(CYGPATH_W) 'finiteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/finiteDifferences.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-FiniteDifferences.obj `if test -f 'FiniteDifferences.cpp'; then $(CYGPATH_W) 'FiniteDifferences.cpp'; else $(CYGPATH_W) '$(srcdir)/FiniteDifferences.cpp'; fi`
 
 nix_tumor3d-Interpolation.o: Interpolation.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-Interpolation.o -MD -MP -MF $(DEPDIR)/nix_tumor3d-Interpolation.Tpo -c -o nix_tumor3d-Interpolation.o `test -f 'Interpolation.cpp' || echo '$(srcdir)/'`Interpolation.cpp
@@ -1610,33 +1610,33 @@ nix_tumor3d-PovrayIO.obj: PovrayIO.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-PovrayIO.obj `if test -f 'PovrayIO.cpp'; then $(CYGPATH_W) 'PovrayIO.cpp'; else $(CYGPATH_W) '$(srcdir)/PovrayIO.cpp'; fi`
 
-nix_tumor3d-Vessel_Graph.o: Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-Vessel_Graph.o -MD -MP -MF $(DEPDIR)/nix_tumor3d-Vessel_Graph.Tpo -c -o nix_tumor3d-Vessel_Graph.o `test -f 'Vessel_Graph.cpp' || echo '$(srcdir)/'`Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-Vessel_Graph.Tpo $(DEPDIR)/nix_tumor3d-Vessel_Graph.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Graph.cpp' object='nix_tumor3d-Vessel_Graph.o' libtool=no @AMDEPBACKSLASH@
+nix_tumor3d-VesselGraph.o: VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-VesselGraph.o -MD -MP -MF $(DEPDIR)/nix_tumor3d-VesselGraph.Tpo -c -o nix_tumor3d-VesselGraph.o `test -f 'VesselGraph.cpp' || echo '$(srcdir)/'`VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-VesselGraph.Tpo $(DEPDIR)/nix_tumor3d-VesselGraph.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselGraph.cpp' object='nix_tumor3d-VesselGraph.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-Vessel_Graph.o `test -f 'Vessel_Graph.cpp' || echo '$(srcdir)/'`Vessel_Graph.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-VesselGraph.o `test -f 'VesselGraph.cpp' || echo '$(srcdir)/'`VesselGraph.cpp
 
-nix_tumor3d-Vessel_Graph.obj: Vessel_Graph.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-Vessel_Graph.obj -MD -MP -MF $(DEPDIR)/nix_tumor3d-Vessel_Graph.Tpo -c -o nix_tumor3d-Vessel_Graph.obj `if test -f 'Vessel_Graph.cpp'; then $(CYGPATH_W) 'Vessel_Graph.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Graph.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-Vessel_Graph.Tpo $(DEPDIR)/nix_tumor3d-Vessel_Graph.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Graph.cpp' object='nix_tumor3d-Vessel_Graph.obj' libtool=no @AMDEPBACKSLASH@
+nix_tumor3d-VesselGraph.obj: VesselGraph.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-VesselGraph.obj -MD -MP -MF $(DEPDIR)/nix_tumor3d-VesselGraph.Tpo -c -o nix_tumor3d-VesselGraph.obj `if test -f 'VesselGraph.cpp'; then $(CYGPATH_W) 'VesselGraph.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselGraph.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-VesselGraph.Tpo $(DEPDIR)/nix_tumor3d-VesselGraph.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselGraph.cpp' object='nix_tumor3d-VesselGraph.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-Vessel_Graph.obj `if test -f 'Vessel_Graph.cpp'; then $(CYGPATH_W) 'Vessel_Graph.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Graph.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-VesselGraph.obj `if test -f 'VesselGraph.cpp'; then $(CYGPATH_W) 'VesselGraph.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselGraph.cpp'; fi`
 
-nix_tumor3d-Vessel_Unit.o: Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-Vessel_Unit.o -MD -MP -MF $(DEPDIR)/nix_tumor3d-Vessel_Unit.Tpo -c -o nix_tumor3d-Vessel_Unit.o `test -f 'Vessel_Unit.cpp' || echo '$(srcdir)/'`Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-Vessel_Unit.Tpo $(DEPDIR)/nix_tumor3d-Vessel_Unit.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Unit.cpp' object='nix_tumor3d-Vessel_Unit.o' libtool=no @AMDEPBACKSLASH@
+nix_tumor3d-VesselUnit.o: VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-VesselUnit.o -MD -MP -MF $(DEPDIR)/nix_tumor3d-VesselUnit.Tpo -c -o nix_tumor3d-VesselUnit.o `test -f 'VesselUnit.cpp' || echo '$(srcdir)/'`VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-VesselUnit.Tpo $(DEPDIR)/nix_tumor3d-VesselUnit.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselUnit.cpp' object='nix_tumor3d-VesselUnit.o' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-Vessel_Unit.o `test -f 'Vessel_Unit.cpp' || echo '$(srcdir)/'`Vessel_Unit.cpp
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-VesselUnit.o `test -f 'VesselUnit.cpp' || echo '$(srcdir)/'`VesselUnit.cpp
 
-nix_tumor3d-Vessel_Unit.obj: Vessel_Unit.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-Vessel_Unit.obj -MD -MP -MF $(DEPDIR)/nix_tumor3d-Vessel_Unit.Tpo -c -o nix_tumor3d-Vessel_Unit.obj `if test -f 'Vessel_Unit.cpp'; then $(CYGPATH_W) 'Vessel_Unit.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Unit.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-Vessel_Unit.Tpo $(DEPDIR)/nix_tumor3d-Vessel_Unit.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Vessel_Unit.cpp' object='nix_tumor3d-Vessel_Unit.obj' libtool=no @AMDEPBACKSLASH@
+nix_tumor3d-VesselUnit.obj: VesselUnit.cpp
+@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-VesselUnit.obj -MD -MP -MF $(DEPDIR)/nix_tumor3d-VesselUnit.Tpo -c -o nix_tumor3d-VesselUnit.obj `if test -f 'VesselUnit.cpp'; then $(CYGPATH_W) 'VesselUnit.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselUnit.cpp'; fi`
+@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/nix_tumor3d-VesselUnit.Tpo $(DEPDIR)/nix_tumor3d-VesselUnit.Po
+@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='VesselUnit.cpp' object='nix_tumor3d-VesselUnit.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-Vessel_Unit.obj `if test -f 'Vessel_Unit.cpp'; then $(CYGPATH_W) 'Vessel_Unit.cpp'; else $(CYGPATH_W) '$(srcdir)/Vessel_Unit.cpp'; fi`
+@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -c -o nix_tumor3d-VesselUnit.obj `if test -f 'VesselUnit.cpp'; then $(CYGPATH_W) 'VesselUnit.cpp'; else $(CYGPATH_W) '$(srcdir)/VesselUnit.cpp'; fi`
 
 nix_tumor3d-VesselNetwork.o: VesselNetwork.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(nix_tumor3d_CXXFLAGS) $(CXXFLAGS) -MT nix_tumor3d-VesselNetwork.o -MD -MP -MF $(DEPDIR)/nix_tumor3d-VesselNetwork.Tpo -c -o nix_tumor3d-VesselNetwork.o `test -f 'VesselNetwork.cpp' || echo '$(srcdir)/'`VesselNetwork.cpp

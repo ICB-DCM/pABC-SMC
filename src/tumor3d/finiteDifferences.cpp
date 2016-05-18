@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "Substrate.h"
 #include "Mathematix.h"
-#include "finiteDifferences.h"
+#include "FiniteDifferences.h"
 //#include <boost/lambda/lambda.hpp>
 
 #define DX 13.

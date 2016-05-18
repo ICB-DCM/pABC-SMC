@@ -131,14 +131,7 @@ am__uninstall_files_from_dir = { \
 am__installdirs = "$(DESTDIR)$(libdir)"
 LTLIBRARIES = $(lib_LTLIBRARIES)
 libnix_la_LIBADD =
-am__dirstamp = $(am__leading_dot)dirstamp
-am_libnix_la_OBJECTS = IO/libnix_la-EPS.lo IO/libnix_la-Povray.lo \
-	libnix_la-gp.lo libnix_la-model.lo libnix_la-hash.lo \
-	libnix_la-statistics.lo libnix_la-optimization.lo \
-	libnix_la-Mathematix.lo libnix_la-testfunctions.lo \
-	libnix_la-tinyxml2.lo libnix_la-tinyxml.lo \
-	libnix_la-tinystr.lo libnix_la-tinyxmlparser.lo \
-	libnix_la-tinyxmlerror.lo
+am_libnix_la_OBJECTS = libnix_la-statistics.lo
 libnix_la_OBJECTS = $(am_libnix_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
@@ -331,7 +324,7 @@ top_builddir = @top_builddir@
 top_srcdir = @top_srcdir@
 AUTOMAKE_OPTIONS = subdir-objects
 lib_LTLIBRARIES = libnix.la
-libnix_la_SOURCES = IO/EPS.cpp IO/Povray.cpp gp.cpp model.cpp hash.cpp statistics.cpp optimization.cpp Mathematix.cpp testfunctions.cpp tinyxml2.cpp tinyxml.cpp tinystr.cpp tinyxmlparser.cpp tinyxmlerror.cpp
+libnix_la_SOURCES = statistics.cpp
 libnix_la_LDFLAGS = -version-info 0:0:0
 libnix_la_CXXFLAGS = -g
 all: all-am
@@ -402,41 +395,17 @@ clean-libLTLIBRARIES:
 	  echo rm -f $${locs}; \
 	  rm -f $${locs}; \
 	}
-IO/$(am__dirstamp):
-	@$(MKDIR_P) IO
-	@: > IO/$(am__dirstamp)
-IO/$(DEPDIR)/$(am__dirstamp):
-	@$(MKDIR_P) IO/$(DEPDIR)
-	@: > IO/$(DEPDIR)/$(am__dirstamp)
-IO/libnix_la-EPS.lo: IO/$(am__dirstamp) IO/$(DEPDIR)/$(am__dirstamp)
-IO/libnix_la-Povray.lo: IO/$(am__dirstamp) \
-	IO/$(DEPDIR)/$(am__dirstamp)
 
 libnix.la: $(libnix_la_OBJECTS) $(libnix_la_DEPENDENCIES) $(EXTRA_libnix_la_DEPENDENCIES) 
 	$(AM_V_CXXLD)$(libnix_la_LINK) -rpath $(libdir) $(libnix_la_OBJECTS) $(libnix_la_LIBADD) $(LIBS)
 
 mostlyclean-compile:
 	-rm -f *.$(OBJEXT)
-	-rm -f IO/*.$(OBJEXT)
-	-rm -f IO/*.lo
 
 distclean-compile:
 	-rm -f *.tab.c
 
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-Mathematix.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-gp.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-hash.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-model.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-optimization.Plo@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-statistics.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-testfunctions.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-tinystr.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-tinyxml.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-tinyxml2.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-tinyxmlerror.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libnix_la-tinyxmlparser.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@IO/$(DEPDIR)/libnix_la-EPS.Plo@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@IO/$(DEPDIR)/libnix_la-Povray.Plo@am__quote@
 
 .cpp.o:
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)depbase=`echo $@ | sed 's|[^/]*$$|$(DEPDIR)/&|;s|\.o$$||'`;\
@@ -462,41 +431,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LTCXXCOMPILE) -c -o $@ $<
 
-IO/libnix_la-EPS.lo: IO/EPS.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT IO/libnix_la-EPS.lo -MD -MP -MF IO/$(DEPDIR)/libnix_la-EPS.Tpo -c -o IO/libnix_la-EPS.lo `test -f 'IO/EPS.cpp' || echo '$(srcdir)/'`IO/EPS.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) IO/$(DEPDIR)/libnix_la-EPS.Tpo IO/$(DEPDIR)/libnix_la-EPS.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='IO/EPS.cpp' object='IO/libnix_la-EPS.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o IO/libnix_la-EPS.lo `test -f 'IO/EPS.cpp' || echo '$(srcdir)/'`IO/EPS.cpp
-
-IO/libnix_la-Povray.lo: IO/Povray.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT IO/libnix_la-Povray.lo -MD -MP -MF IO/$(DEPDIR)/libnix_la-Povray.Tpo -c -o IO/libnix_la-Povray.lo `test -f 'IO/Povray.cpp' || echo '$(srcdir)/'`IO/Povray.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) IO/$(DEPDIR)/libnix_la-Povray.Tpo IO/$(DEPDIR)/libnix_la-Povray.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='IO/Povray.cpp' object='IO/libnix_la-Povray.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o IO/libnix_la-Povray.lo `test -f 'IO/Povray.cpp' || echo '$(srcdir)/'`IO/Povray.cpp
-
-libnix_la-gp.lo: gp.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-gp.lo -MD -MP -MF $(DEPDIR)/libnix_la-gp.Tpo -c -o libnix_la-gp.lo `test -f 'gp.cpp' || echo '$(srcdir)/'`gp.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-gp.Tpo $(DEPDIR)/libnix_la-gp.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='gp.cpp' object='libnix_la-gp.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-gp.lo `test -f 'gp.cpp' || echo '$(srcdir)/'`gp.cpp
-
-libnix_la-model.lo: model.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-model.lo -MD -MP -MF $(DEPDIR)/libnix_la-model.Tpo -c -o libnix_la-model.lo `test -f 'model.cpp' || echo '$(srcdir)/'`model.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-model.Tpo $(DEPDIR)/libnix_la-model.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='model.cpp' object='libnix_la-model.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-model.lo `test -f 'model.cpp' || echo '$(srcdir)/'`model.cpp
-
-libnix_la-hash.lo: hash.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-hash.lo -MD -MP -MF $(DEPDIR)/libnix_la-hash.Tpo -c -o libnix_la-hash.lo `test -f 'hash.cpp' || echo '$(srcdir)/'`hash.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-hash.Tpo $(DEPDIR)/libnix_la-hash.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='hash.cpp' object='libnix_la-hash.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-hash.lo `test -f 'hash.cpp' || echo '$(srcdir)/'`hash.cpp
-
 libnix_la-statistics.lo: statistics.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-statistics.lo -MD -MP -MF $(DEPDIR)/libnix_la-statistics.Tpo -c -o libnix_la-statistics.lo `test -f 'statistics.cpp' || echo '$(srcdir)/'`statistics.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-statistics.Tpo $(DEPDIR)/libnix_la-statistics.Plo
@@ -504,68 +438,11 @@ libnix_la-statistics.lo: statistics.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-statistics.lo `test -f 'statistics.cpp' || echo '$(srcdir)/'`statistics.cpp
 
-libnix_la-optimization.lo: optimization.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-optimization.lo -MD -MP -MF $(DEPDIR)/libnix_la-optimization.Tpo -c -o libnix_la-optimization.lo `test -f 'optimization.cpp' || echo '$(srcdir)/'`optimization.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-optimization.Tpo $(DEPDIR)/libnix_la-optimization.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='optimization.cpp' object='libnix_la-optimization.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-optimization.lo `test -f 'optimization.cpp' || echo '$(srcdir)/'`optimization.cpp
-
-libnix_la-Mathematix.lo: Mathematix.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-Mathematix.lo -MD -MP -MF $(DEPDIR)/libnix_la-Mathematix.Tpo -c -o libnix_la-Mathematix.lo `test -f 'Mathematix.cpp' || echo '$(srcdir)/'`Mathematix.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-Mathematix.Tpo $(DEPDIR)/libnix_la-Mathematix.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='Mathematix.cpp' object='libnix_la-Mathematix.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-Mathematix.lo `test -f 'Mathematix.cpp' || echo '$(srcdir)/'`Mathematix.cpp
-
-libnix_la-testfunctions.lo: testfunctions.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-testfunctions.lo -MD -MP -MF $(DEPDIR)/libnix_la-testfunctions.Tpo -c -o libnix_la-testfunctions.lo `test -f 'testfunctions.cpp' || echo '$(srcdir)/'`testfunctions.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-testfunctions.Tpo $(DEPDIR)/libnix_la-testfunctions.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='testfunctions.cpp' object='libnix_la-testfunctions.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-testfunctions.lo `test -f 'testfunctions.cpp' || echo '$(srcdir)/'`testfunctions.cpp
-
-libnix_la-tinyxml2.lo: tinyxml2.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-tinyxml2.lo -MD -MP -MF $(DEPDIR)/libnix_la-tinyxml2.Tpo -c -o libnix_la-tinyxml2.lo `test -f 'tinyxml2.cpp' || echo '$(srcdir)/'`tinyxml2.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-tinyxml2.Tpo $(DEPDIR)/libnix_la-tinyxml2.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='tinyxml2.cpp' object='libnix_la-tinyxml2.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-tinyxml2.lo `test -f 'tinyxml2.cpp' || echo '$(srcdir)/'`tinyxml2.cpp
-
-libnix_la-tinyxml.lo: tinyxml.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-tinyxml.lo -MD -MP -MF $(DEPDIR)/libnix_la-tinyxml.Tpo -c -o libnix_la-tinyxml.lo `test -f 'tinyxml.cpp' || echo '$(srcdir)/'`tinyxml.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-tinyxml.Tpo $(DEPDIR)/libnix_la-tinyxml.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='tinyxml.cpp' object='libnix_la-tinyxml.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-tinyxml.lo `test -f 'tinyxml.cpp' || echo '$(srcdir)/'`tinyxml.cpp
-
-libnix_la-tinystr.lo: tinystr.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-tinystr.lo -MD -MP -MF $(DEPDIR)/libnix_la-tinystr.Tpo -c -o libnix_la-tinystr.lo `test -f 'tinystr.cpp' || echo '$(srcdir)/'`tinystr.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-tinystr.Tpo $(DEPDIR)/libnix_la-tinystr.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='tinystr.cpp' object='libnix_la-tinystr.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-tinystr.lo `test -f 'tinystr.cpp' || echo '$(srcdir)/'`tinystr.cpp
-
-libnix_la-tinyxmlparser.lo: tinyxmlparser.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-tinyxmlparser.lo -MD -MP -MF $(DEPDIR)/libnix_la-tinyxmlparser.Tpo -c -o libnix_la-tinyxmlparser.lo `test -f 'tinyxmlparser.cpp' || echo '$(srcdir)/'`tinyxmlparser.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-tinyxmlparser.Tpo $(DEPDIR)/libnix_la-tinyxmlparser.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='tinyxmlparser.cpp' object='libnix_la-tinyxmlparser.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-tinyxmlparser.lo `test -f 'tinyxmlparser.cpp' || echo '$(srcdir)/'`tinyxmlparser.cpp
-
-libnix_la-tinyxmlerror.lo: tinyxmlerror.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -MT libnix_la-tinyxmlerror.lo -MD -MP -MF $(DEPDIR)/libnix_la-tinyxmlerror.Tpo -c -o libnix_la-tinyxmlerror.lo `test -f 'tinyxmlerror.cpp' || echo '$(srcdir)/'`tinyxmlerror.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) $(DEPDIR)/libnix_la-tinyxmlerror.Tpo $(DEPDIR)/libnix_la-tinyxmlerror.Plo
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='tinyxmlerror.cpp' object='libnix_la-tinyxmlerror.lo' libtool=yes @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(LIBTOOL) $(AM_V_lt) --tag=CXX $(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=compile $(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libnix_la_CXXFLAGS) $(CXXFLAGS) -c -o libnix_la-tinyxmlerror.lo `test -f 'tinyxmlerror.cpp' || echo '$(srcdir)/'`tinyxmlerror.cpp
-
 mostlyclean-libtool:
 	-rm -f *.lo
 
 clean-libtool:
 	-rm -rf .libs _libs
-	-rm -rf IO/.libs IO/_libs
 
 ID: $(am__tagged_files)
 	$(am__define_uniq_tagged_files); mkid -fID $$unique
@@ -682,8 +559,6 @@ clean-generic:
 distclean-generic:
 	-test -z "$(CONFIG_CLEAN_FILES)" || rm -f $(CONFIG_CLEAN_FILES)
 	-test . = "$(srcdir)" || test -z "$(CONFIG_CLEAN_VPATH_FILES)" || rm -f $(CONFIG_CLEAN_VPATH_FILES)
-	-rm -f IO/$(DEPDIR)/$(am__dirstamp)
-	-rm -f IO/$(am__dirstamp)
 
 maintainer-clean-generic:
 	@echo "This command is intended for maintainers to use"
@@ -694,7 +569,7 @@ clean-am: clean-generic clean-libLTLIBRARIES clean-libtool \
 	mostlyclean-am
 
 distclean: distclean-am
-	-rm -rf ./$(DEPDIR) IO/$(DEPDIR)
+	-rm -rf ./$(DEPDIR)
 	-rm -f Makefile
 distclean-am: clean-am distclean-compile distclean-generic \
 	distclean-tags
@@ -740,7 +615,7 @@ install-ps-am:
 installcheck-am:
 
 maintainer-clean: maintainer-clean-am
-	-rm -rf ./$(DEPDIR) IO/$(DEPDIR)
+	-rm -rf ./$(DEPDIR)
 	-rm -f Makefile
 maintainer-clean-am: distclean-am maintainer-clean-generic
 

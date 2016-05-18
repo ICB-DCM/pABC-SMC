@@ -58,6 +58,6 @@ AC_FUNC_REALLOC
 AC_CHECK_FUNCS([floor pow sqrt])
 
 AC_CONFIG_FILES([Makefile
-                 src/tumor3d/Makefile
-                 src/libnix/Makefile])
+                 src/libnix/Makefile
+                 src/tumor3d/Makefile])
 AC_OUTPUT
