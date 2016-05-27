@@ -118,14 +118,23 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
 After finishing the simulation for the given model parameters the program will print the likelihood to `stdout`. 
  
 ## Objective Function and Experimental Data
-The directory `\data` contains 4 example data set with different error models:
+The directory `\data` contains experimental data for four experimental conditions.
 
-| Files | 1st column (x) | 2nd column (y) | 3rd column (\sigma) |
+The measured quantities are:
+* The spheroid radius (GC) as a function of time.
+* The fraction of proliferating cells on day 17 (T3_Ki67) and day 24 (T4_Ki67) as a function of the distance from the spheroid rim.
+* The fraction of necrotic cells on day 17 (T3_TUNEL) and day 24 (T4_TUNEL) as a function of the distance from the spheroid rim.
+* The extracellular matrix intensity on day 17 (T3_ECM) and day 24 (T4_ECM) as a function of the distance from the spheroid rim.
+
+These quantities are reported for up to for conditions:
+ and  datasets and different error models:
+
+| Files | 1st column | 2nd column | 3rd column |
 | --- | --- | --- | --- |
-| `SK-MES1_*.dat` | time (h) / distance (\mu m) | mean | **std** |
-| `SK-MES1_*.dat.mean` | time (h) / distance (\mu m) | mean | **0.1 * mean** |
-| `SK-MES1_*.dat.std` | time (h) / distance (\mu m) | mean | **std of mean (over all x)** |
-| `SK-MES1_*.dat.minmax` | time (h) / distance (\mu m) | mean | **max mean - min mean (over all x)** |
+| `SK-MES1_*.dat` | time (h) / distance (\mu m) | mean | standard deviation |
+| `SK-MES1_*.dat.mean` | time (h) / distance (\mu m) | mean | mean / 10 |
+| `SK-MES1_*.dat.std` | time (h) / distance (\mu m) | mean | standard deviation of mean (over all time points / distances) |
+| `SK-MES1_*.dat.minmax` | time (h) / distance (\mu m) | mean | max(mean) - min(mean) (over all time points / distances) |
 
 An example 
 
