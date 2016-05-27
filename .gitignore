@@ -2,11 +2,11 @@
 m4/*
 aclocal.m4
 
-autom4te*
+autom4te.cache/**
 
 libtool
 
-config/*
+config/**
 config.*
 
 src/libnix/Makefile
