@@ -156,7 +156,7 @@ These quantities are reported for up to four experimental conditions conditions:
 
 As the number of replicates available for the histological data is rather same and the estimated standard deviation therefore not very reliable. For parameter estimation, we considered therefore in addition to standardalternative distance measures.
 
-The experimental dat are stored `\data\*.dat`. The files `\data\*.dat.*` provide alternative measures for uncertainty in the third column.
+The experimental data are stored in the files `\data\*.dat`. The files `\data\*.dat.*` provide alternative measures for uncertainty in the third column.
 
 
 | Files | 1st column | 2nd column | 3rd column |
@@ -166,7 +166,7 @@ The experimental dat are stored `\data\*.dat`. The files `\data\*.dat.*` provide
 | `SK-MES1_*.dat.Std` | time (h) / distance (\mu m) | mean | standard deviation of mean (over all time points / distances) |
 | `SK-MES1_*.dat.MinMax` | time (h) / distance (\mu m) | mean | max(mean) - min(mean) (over all time points / distances) |
 
-An example: \
+** An example: **
 Comparison of the simulation result of the 2D model for an oxygen concentration of 0.28 mM and a glucose concentration of 25 mM to the corresponding dataset (III) using the dynamic range of the measurement (max - min) for weighting
 
 ``` 
