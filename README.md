@@ -7,16 +7,13 @@ Table of Content:
   * [Usage](#usage)
     * [Tumor Simulation](#1-tumor-simulation)
     * [Comparison with Data](#2-comparison-with-data)
-2. [Example Data](#example-data)
-3. [pABC-SMC Scripts](#pabc-smc-scripts)
-  * **MISSING**
+2. [Objective Function and Experimental Data](#objective-function-and-experimental-data)
+3. [pABC-SMC Algorithm](#pabc-smc-algorithm)
+4. [Contacts](#contacts)
+5. [Citation](#citation)
 
 
-## pABC-SMC Scripts
-
-**MISSING**
-
-## Tumor Growth Simulation Tool
+## 1. Tumor Growth Simulation Tool
 ### Compiling & Installation
 No prerequisites are needed for compilation, except `autotools`, `make` and `g++`. 
 
@@ -43,7 +40,7 @@ If everything worked properly, the following files will have been installed:
 
 ### Usage 
 ####1) Tumor Simulation:
-For a simple tumor growth simulation of **1 realisation** for **200 hours** on a **two-dimensional lattice** execute:
+For a simple tumuor growth simulation of **1 realisation** for **200 hours** on a **two-dimensional lattice** execute:
 
 ```
 nix-tumor2d -x 1 -y 200
@@ -79,7 +76,7 @@ The default model parameter values can be modified by passing further arguments:
 | `-RWasteThresholdSlowedGrowth[FLOAT]` | waste division threshold (mM) | 0.032 |
 | `-RWasteIntoxicatedCellCycles[FLOAT]` | max #cell cycles under waste exposure / O2 deprivation | 0.032 |
 
-For a complete list of programm arguments run:
+For a complete list of program arguments run:
 
 ```
 nix-tumor3d -h
@@ -103,10 +100,10 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
   | `-K[FILENAME]` | day 24: KI67 positive / proliferating cell fraction* |
   | `-T[FILENAME]` | day 24: TUNEL positive / necrotic cell fraction* |
   | `-E[FILENAME]` | day 24: COLIV intensity / extra-cellular matrix (ECM) density* |
-  \* as function of the distance to the outer tumor border (\mu m)
+  \* as function of the distance to the outer tumuor border (\mu m)
   \*\* as function of time (days)
  
-* The `LIKELIHOOD_THRESHOLD` indicates the value which will stop a running simulation if exeeded and will be returned back. It is passed as 
+* The `LIKELIHOOD_THRESHOLD` indicates the value which will stop a running simulation if exceeded and will be returned back. It is passed as 
   
   ```
   -l[FLOAT] 
@@ -118,9 +115,9 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
   FLOAT ... FLOAT
   ```
 
-After finishing the simulation for the given model parameters the programm will print the likelihood to `stdout`. 
+After finishing the simulation for the given model parameters the program will print the likelihood to `stdout`. 
  
-## Example Data
+## Objective Function and Experimental Data
 The directory `\data` contains 4 example data set with different error models:
 
 | Files | 1st column (x) | 2nd column (y) | 3rd column (\sigma) |
@@ -138,3 +135,20 @@ nix-compare2d -O0.28 -G25 -gdata/SK-MES1_III_GC.dat.MinMax \
 	-tdata/SK-MES1_III_T3_TUNEL.dat.MinMax -Tdata/SK-MES1_III_T4_TUNEL.dat.MinMax \
 	-edata/SK-MES1_III_T3_ECM.dat.MinMax -Edata/SK-MES1_III_T4_ECM.dat.MinMax
 ``` 
+
+## pABC-SMC Algorithm
+
+**MISSING**
+
+## Contacts
+
+Nick Jagiella
+
+email: nick.jagiella@gmail.com
+
+
+## Citation
+
+Nick Jagiella
+
+email: nick.jagiella@gmail.com
