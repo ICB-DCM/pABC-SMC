@@ -35,9 +35,11 @@ Algorithms implemented in the pABC-SMC repository employ C++ and MATLAB. To expl
 
 ## 2. Tumor Growth Simulation Tool
 
+### Example Simulation
 <img width="240" height="240" src="demo/dividing.gif"/>
 <img width="240" height="240" src="demo/necrotic.gif"/>
 <img width="240" height="240" src="demo/ecm.gif"/>
+Fig. Figure is showing an example simulation of a tumor spheroid growing for 40 days. *left:* dividing cells (red=dividing, blue=quiescent). *left:* necrotic cells (red=necrotic, blue=alive). *left:* extracellular matrix (ECM). 
 
 ### Compiling & Installation
 No prerequisites are needed for compilation, except `autotools`, `make` and `g++`. 
