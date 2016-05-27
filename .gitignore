@@ -3,4 +3,16 @@ m4/*
 
 autom4te.cache/*
 
+config/*
+
 config.*
+
+src/libnix/Makefile
+
+src/libnix/Makefile.in
+
+src/tumor3d/Makefile
+
+src/tumor3d/Makefile.in
+
+src/tumor3d/.deps/*
