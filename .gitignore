@@ -10,9 +10,9 @@ config/**
 config.*
 
 src/libnix/Makefile
-src/libnix/Makefile.in
+src/libnix/Makefile.*
 src/libnix/.deps/*
 
 src/tumor3d/Makefile*
-src/tumor3d/Makefile.in
+src/tumor3d/Makefile.*
 src/tumor3d/.deps/*
