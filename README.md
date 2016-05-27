@@ -35,9 +35,9 @@ Algorithms implemented in the pABC-SMC repository employ C++ and MATLAB. To expl
 
 ## 2. Tumor Growth Simulation Tool
 
-<img width="320" height="240" src="demo/dividing.gif"/>
-<img width="320" height="240" src="demo/necrotic.gif"/>
-<img width="320" height="240" src="demo/ecm.gif"/>
+<img width="240" height="240" src="demo/dividing.gif"/>
+<img width="240" height="240" src="demo/necrotic.gif"/>
+<img width="240" height="240" src="demo/ecm.gif"/>
 
 ### Compiling & Installation
 No prerequisites are needed for compilation, except `autotools`, `make` and `g++`. 
