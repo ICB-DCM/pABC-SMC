@@ -7,7 +7,7 @@ Table of Content:
   * [Usage](#usage)
     * [Tumor Simulation](#1-tumor-simulation)
     * [Comparison with Data](#2-comparison-with-data)
-2. [Objective Function and Experimental Data](#objective-function-and-experimental-data)
+2. [Experimental Data](#experimental-data)
 3. [pABC-SMC Algorithm](#pabc-smc-algorithm)
 4. [Contacts](#contacts)
 5. [Citation](#citation)
@@ -117,7 +117,7 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
 
 After finishing the simulation for the given model parameters the program will print the likelihood to `stdout`. 
  
-## Objective Function and Experimental Data
+## 2. Experimental Data
 The directory `\data` contains experimental data for four experimental conditions.
 
 The measured quantities are:
@@ -126,8 +126,16 @@ The measured quantities are:
 * The fraction of necrotic cells on day 17 (T3_TUNEL) and day 24 (T4_TUNEL) as a function of the distance from the spheroid rim.
 * The extracellular matrix intensity on day 17 (T3_ECM) and day 24 (T4_ECM) as a function of the distance from the spheroid rim.
 
-These quantities are reported for up to for conditions:
- and  datasets and different error models:
+These quantities are reported for up to four experimental conditions conditions:
+* Condition I: glucose concentration = 1 mM, oxygen concentration = 0.28 mM
+* Condition II: glucose concentration = 25 mM, oxygen concentration = 0.28 mM
+* Condition III: glucose concentration = 5 mM, oxygen concentration = 0.28 mM
+* Condition IV: glucose concentration = 25 mM, oxygen concentration = 0.07 mM
+
+As the number of replicates available for the histological data is rather same and the estimated standard deviation therefore not very reliable. For parameter estimation, we considered therefore in addition to standardalternative distance measures.
+
+The experimental dat are stored `\data\*.dat`. The files `\data\*.dat.*` provide alternative measures for uncertainty in the third column.
+
 
 | Files | 1st column | 2nd column | 3rd column |
 | --- | --- | --- | --- |
@@ -135,6 +143,8 @@ These quantities are reported for up to for conditions:
 | `SK-MES1_*.dat.mean` | time (h) / distance (\mu m) | mean | mean / 10 |
 | `SK-MES1_*.dat.std` | time (h) / distance (\mu m) | mean | standard deviation of mean (over all time points / distances) |
 | `SK-MES1_*.dat.minmax` | time (h) / distance (\mu m) | mean | max(mean) - min(mean) (over all time points / distances) |
+
+
 
 An example 
 
@@ -145,18 +155,18 @@ nix-compare2d -O0.28 -G25 -gdata/SK-MES1_III_GC.dat.MinMax \
 	-edata/SK-MES1_III_T3_ECM.dat.MinMax -Edata/SK-MES1_III_T4_ECM.dat.MinMax
 ``` 
 
-## pABC-SMC Algorithm
+## 2. pABC-SMC Algorithm
 
 **MISSING**
 
-## Contacts
+## 3. Contacts
 
 Nick Jagiella
 
 email: nick.jagiella@gmail.com
 
 
-## Citation
+## 4. Citation
 
 Nick Jagiella
 
