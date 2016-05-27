@@ -166,10 +166,12 @@ The experimental dat are stored `\data\*.dat`. The files `\data\*.dat.*` provide
 | `SK-MES1_*.dat.Std` | time (h) / distance (\mu m) | mean | standard deviation of mean (over all time points / distances) |
 | `SK-MES1_*.dat.MinMax` | time (h) / distance (\mu m) | mean | max(mean) - min(mean) (over all time points / distances) |
 
-An example: Comparison of the simulation result of the 2D model to to the dataset using the dynamic range of the measurement (max - min) for weighting
+An example: \
+Comparison of the simulation result of the 2D model for an oxygen concentration of 0.28 mM and a glucose concentration of 25 mM to the corresponding dataset (III) using the dynamic range of the measurement (max - min) for weighting
 
 ``` 
-nix-compare2d -O0.28 -G25 -gdata/SK-MES1_III_GC.dat.MinMax \
+nix-compare2d -O0.28 -G25 \
+	-gdata/SK-MES1_III_GC.dat.MinMax \
 	-kdata/SK-MES1_III_T3_Ki67.dat.MinMax -Kdata/SK-MES1_III_T4_Ki67.dat.MinMax \
 	-tdata/SK-MES1_III_T3_TUNEL.dat.MinMax -Tdata/SK-MES1_III_T4_TUNEL.dat.MinMax \
 	-edata/SK-MES1_III_T3_ECM.dat.MinMax -Edata/SK-MES1_III_T4_ECM.dat.MinMax
@@ -185,11 +187,8 @@ The current implementation of the pABC-SMC algorithm is very problem and infrast
 * Dennis Rickert - dennis.rickert@helmholtz-muenchen.de (developer)
 * Jan Hasenauer - jan.hasenauer@helmholtz-muenchen.de
 
-email: nick.jagiella@gmail.com
-
-
 ## 6. Citation
 
-If you use this software in a publication, please cite one of the following manuscripts:
+If you use this software in a publication, please cite one of the following manuscript:
 
 * N. Jagiella, B. Müller, M. Müller, I. E. Vignon-Clementel and D. Drasdo. Inferring growth control mechanisms in growing multi-cellular spheroids of NSCLC cells from spatial-temporal image data, PLoS Comput. Biol., 12(2): e1004412 , 2016.
