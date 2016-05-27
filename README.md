@@ -2,18 +2,38 @@
 
 Table of Content:
 
-1. [Tumor Growth Simulation Tool](#tumor-growth-simulation-tool)
+1. [Overview](#overview)
+  * [Features](#features)
+  * [Requirements](#requirements)
+2. [Tumor Growth Simulation Tool](#tumor-growth-simulation-tool)
   * [Compilation & Installation](#compiling--installation)
   * [Usage](#usage)
     * [Tumor Simulation](#1-tumor-simulation)
     * [Comparison with Data](#2-comparison-with-data)
-2. [Experimental Data](#experimental-data)
-3. [pABC-SMC Algorithm](#pabc-smc-algorithm)
-4. [Contacts](#contacts)
-5. [Citation](#citation)
+3. [Experimental Data](#experimental-data)
+4. [pABC-SMC Algorithm](#pabc-smc-algorithm)
+5. [Contacts](#contacts)
+6. [Citation](#citation)
+
+## 1. Overview
+
+Parallel Approximate Bayesian Computing Sequential Monte Carlo (pABC-SMC) algorithm for statistical inference for multi-scale and multi-cellular biological processes
+
+### Features
+
+The pABC-SMC repository provides an implementation for the simulation of tumour spheroids. Furthermore, it facilitates the statistical inference of model parameters from spheroid growth curves and histological information. Its key features are
+
+efficient numerical implementation for lattice-based model for tumour spheroid growth;
+collection of experimental data for SK-MES-1 cells;
+statistical inference using Approximate Bayesian Computing Sequential Monte Carlo (ABC-SMC); and
+parallelisation using the ABC-SMC algorithm for our grid topology.
+
+### Requirements
+
+Algorithms implemented in the pABC-SMC repository employ C++ and MATLAB. To exploit its functionality the MATLAB Statistical Toolbox. The parallel implementation is tailored for our computing grid. The use of other infrastructures requires reimplementation.
 
 
-## 1. Tumor Growth Simulation Tool
+## 2. Tumor Growth Simulation Tool
 ### Compiling & Installation
 No prerequisites are needed for compilation, except `autotools`, `make` and `g++`. 
 
@@ -40,7 +60,7 @@ If everything worked properly, the following files will have been installed:
 
 ### Usage 
 ####1) Tumor Simulation:
-For a simple tumuor growth simulation of **1 realisation** for **200 hours** on a **two-dimensional lattice** execute:
+For a simple tumour growth simulation of **1 realisation** for **200 hours** on a **two-dimensional lattice** execute:
 
 ```
 nix-tumor2d -x 1 -y 200
@@ -117,7 +137,7 @@ nix-compare2d DATA_FILES LIKELIHOOD_THRESHOLD PARAMETER_LIST
 
 After finishing the simulation for the given model parameters the program will print the likelihood to `stdout`. 
  
-## 2. Experimental Data
+## 3. Experimental Data
 The directory `\data` contains experimental data for four experimental conditions.
 
 The measured quantities are:
@@ -140,9 +160,9 @@ The experimental dat are stored `\data\*.dat`. The files `\data\*.dat.*` provide
 | Files | 1st column | 2nd column | 3rd column |
 | --- | --- | --- | --- |
 | `SK-MES1_*.dat` | time (h) / distance (\mu m) | mean | standard deviation |
-| `SK-MES1_*.dat.mean` | time (h) / distance (\mu m) | mean | mean / 10 |
-| `SK-MES1_*.dat.std` | time (h) / distance (\mu m) | mean | standard deviation of mean (over all time points / distances) |
-| `SK-MES1_*.dat.minmax` | time (h) / distance (\mu m) | mean | max(mean) - min(mean) (over all time points / distances) |
+| `SK-MES1_*.dat.Mean` | time (h) / distance (\mu m) | mean | mean / 10 |
+| `SK-MES1_*.dat.Std` | time (h) / distance (\mu m) | mean | standard deviation of mean (over all time points / distances) |
+| `SK-MES1_*.dat.MinMax` | time (h) / distance (\mu m) | mean | max(mean) - min(mean) (over all time points / distances) |
 
 An example: Comparison of the simulation result of the 2D model to to the dataset using the dynamic range of the measurement (max - min) for weighting
 
@@ -153,11 +173,11 @@ nix-compare2d -O0.28 -G25 -gdata/SK-MES1_III_GC.dat.MinMax \
 	-edata/SK-MES1_III_T3_ECM.dat.MinMax -Edata/SK-MES1_III_T4_ECM.dat.MinMax
 ``` 
 
-## 2. pABC-SMC Algorithm
+## 4. pABC-SMC Algorithm
 
-**MISSING**
+The current implementation of the pABC-SMC algorithm is very problem and infrastructure specific. We will are currently working on a more flexible implementation of the code. We are however happy to provide the current implementation upon request.
 
-## 3. Contacts
+## 5. Contacts
 
 * Nick Jagiella - nick.jagiella@gmail.com (main developer)
 * Dennis Rickert - dennis.rickert@helmholtz-muenchen.de (developer)
@@ -166,7 +186,7 @@ nix-compare2d -O0.28 -G25 -gdata/SK-MES1_III_GC.dat.MinMax \
 email: nick.jagiella@gmail.com
 
 
-## 4. Citation
+## 6. Citation
 
 If you use this software in a publication, please cite one of the following manuscripts:
 
