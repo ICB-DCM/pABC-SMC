@@ -52,10 +52,10 @@ If everything worked properly, the following files will have been installed:
   libnix
   
 * Executables:
-  nix-tumor2d
-  nix-tumor3d
-  nix-compare2d
-  nix-compare3d
+  * nix-tumor2d
+  * nix-tumor3d
+  * nix-compare2d
+  * nix-compare3d
   
 
 ### Usage 
@@ -66,11 +66,13 @@ For a simple tumour growth simulation of **1 realisation** for **200 hours** on 
 nix-tumor2d -x 1 -y 200
 ```
 
-The equivalent in **three dimensions** and a batch of **20 realisations**:
+The equivalent in **three dimensions** and a batch of **3 realisations**:
 
 ```
-nix-tumor3d -x 1 -y 200
+nix-tumor3d -x 3 -y 200
 ```
+
+The two-dimensional simulation will take a few minutes while the three dimensional implementation several simulation will take several days.
 
 The default model parameter values can be modified by passing further arguments:
 
