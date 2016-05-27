@@ -144,9 +144,7 @@ The experimental dat are stored `\data\*.dat`. The files `\data\*.dat.*` provide
 | `SK-MES1_*.dat.std` | time (h) / distance (\mu m) | mean | standard deviation of mean (over all time points / distances) |
 | `SK-MES1_*.dat.minmax` | time (h) / distance (\mu m) | mean | max(mean) - min(mean) (over all time points / distances) |
 
-
-
-An example 
+An example: Comparison of the simulation result of the 2D model to to the dataset using the dynamic range of the measurement (max - min) for weighting
 
 ``` 
 nix-compare2d -O0.28 -G25 -gdata/SK-MES1_III_GC.dat.MinMax \
@@ -161,13 +159,15 @@ nix-compare2d -O0.28 -G25 -gdata/SK-MES1_III_GC.dat.MinMax \
 
 ## 3. Contacts
 
-Nick Jagiella
+* Nick Jagiella - nick.jagiella@gmail.com (main developer)
+* Dennis Rickert - dennis.rickert@helmholtz-muenchen.de (developer)
+* Jan Hasenauer - jan.hasenauer@helmholtz-muenchen.de
 
 email: nick.jagiella@gmail.com
 
 
 ## 4. Citation
 
-Nick Jagiella
+If you use this software in a publication, please cite one of the following manuscripts:
 
-email: nick.jagiella@gmail.com
+* N. Jagiella, B. Müller, M. Müller, I. E. Vignon-Clementel and D. Drasdo. Inferring growth control mechanisms in growing multi-cellular spheroids of NSCLC cells from spatial-temporal image data, PLoS Comput. Biol., 12(2): e1004412 , 2016.
