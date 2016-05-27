@@ -1,18 +1,18 @@
 
 m4/*
 
-autom4te.cache/*
+autom4te*
+
+libtool
 
 config/*
 
 config.*
 
-src/libnix/Makefile
+src/libnix/Makefile*
 
-src/libnix/Makefile.in
+src/libnix/.deps/*
 
-src/tumor3d/Makefile
-
-src/tumor3d/Makefile.in
+src/tumor3d/Makefile*
 
 src/tumor3d/.deps/*
