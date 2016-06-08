@@ -42,16 +42,25 @@ Algorithms implemented in the pABC-SMC repository employ C++ and MATLAB. To expl
 Fig. Figure is showing an example simulation of a tumor spheroid growing for 40 days. *left:* dividing cells (red=dividing, blue=quiescent). *left:* necrotic cells (red=necrotic, blue=alive). *left:* extracellular matrix (ECM). 
 
 ### Compiling & Installation
-No prerequisites are needed for compilation, except `autotools`, `make` and `g++`. 
+No prerequisites are needed for compilation, except `autotools`, `make`, `g++` and `gsl` (the gnu scientific library). 
 
 
-To configure and compile the code on your system just execute: 
+To configure and compile the code on your mac system execute: 
 ```
+automake --add-missing
 autoreconf
 ./configure
 make
 sudo make install
 ``` 
+Please note that the OSX version El Capitan broke linking against the GSL; the makefile provided will not suffice in this case & compilation can not be supported.
+
+On Linux, only
+``` 
+./configure
+sudo make install
+``` 
+are required.
 
 If everything worked properly, the following files will have been installed:
 

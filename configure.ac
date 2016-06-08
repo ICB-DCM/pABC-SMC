@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_PREREQ([2.69])
+#AC_PREREQ([2.69])
 AC_INIT([FULL-PACKAGE-NAME], [1.0], [BUG-REPORT-ADDRESS])
 AC_CONFIG_SRCDIR([config.h.in])
 AC_CONFIG_HEADERS([config.h])
@@ -49,7 +49,7 @@ AM_CONDITIONAL([USE_LIBSDL2], [test "$HAS_LIBSDL2" -eq 1])
 AC_CHECK_HEADERS([float.h stdint.h stdlib.h string.h unistd.h])
 
 # Checks for typedefs, structures, and compiler characteristics.
-AC_CHECK_HEADER_STDBOOL
+#AC_CHECK_HEADER_STDBOOL
 AC_TYPE_UINT32_T
 
 # Checks for library functions.
